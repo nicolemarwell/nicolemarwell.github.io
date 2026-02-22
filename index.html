@@ -485,6 +485,19 @@
       letter-spacing: 0.05em;
     }
 
+    .pub-clickable {
+      cursor: pointer;
+      transition: color 0.15s;
+    }
+    .pub-clickable:hover { color: var(--deep); }
+    .pub-read-more {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brass);
+      cursor: pointer;
+    }
     /* ── BOOK MODALS ───────────────────────────────────────── */
     .book-title-link {
       cursor: pointer;
@@ -693,7 +706,7 @@
     </div>
   </section>
 
-  <section id="publications" class="content-section">
+    <section id="publications" class="content-section">
     <div class="section-header">
       <span class="section-eyebrow">Scholarship</span>
       <h2 class="section-title">Publications</h2>
@@ -714,60 +727,65 @@
       <div class="book-note">Honorable Mention, Robert E. Park Distinguished Scholarly Book Award, ASA Community and Urban Sociology Section</div>
     </div>
 
-    <div class="pub-category">Peer-Reviewed Articles</div>
+    <div class="pub-category">Internet Equity</div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Henna Zamurd Butt, Nicole P. Marwell and Nick Feamster. Forthcoming (2026). "Internet Futuring: How Communities are Connecting Themselves." <em>Digital Culture &amp; Society</em> 11, 1.</div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-internet-futuring').classList.add('open')">Henna Zamurd Butt, Nicole P. Marwell and Nick Feamster. Forthcoming (2026). "Internet Futuring: How Communities are Connecting Themselves." <em>Digital Culture &amp; Society</em> 11, 1.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Jonatas Marques, Jared N. Schachner, Nicole P. Marwell and Nick Feamster. Forthcoming (2026). "Characterizing Spatial Variation in Internet Access Latency: A Multilevel Approach." <em>ACM Internet Measurement Conference</em>.</div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-spatial-variation').classList.add('open')">Jonatas Marques, Jared N. Schachner, Nicole P. Marwell and Nick Feamster. Forthcoming (2026). "Characterizing Spatial Variation in Internet Access Latency: A Multilevel Approach." <em>ACM Internet Measurement Conference</em>.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Taveesh Sharma, Paul Schmitt, Francesco Bronzino, Nicole P. Marwell and Nick Feamster. 2025. "Beyond Data Points: Regionalizing Crowdsourced Latency Measurements." <em>ACM SIGMETRICS</em>, pp. 1–14, Stony Brook, NY.<div class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3700416" target="_blank">DOI</a></div></div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-beyond-data-points').classList.add('open')">Taveesh Sharma, Paul Schmitt, Francesco Bronzino, Nicole P. Marwell and Nick Feamster. 2025. "Beyond Data Points: Regionalizing Crowdsourced Latency Measurements." <em>ACM SIGMETRICS</em>, pp. 1–14, Stony Brook, NY.<div class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3700416" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Jonatas Marques, Alexis Schrubbe, Nicole P. Marwell and Nick Feamster. 2024. "Are We Up to the Challenge? An Analysis of the FCC Broadband Data Collection Fixed Internet Availability Challenges." <em>Proceedings of the 52nd Research Conference on Communications, Information and Internet Policy (TPRC)</em>, Arlington, VA.<div class="pub-links"><a href="https://arxiv.org/abs/2404.04189" target="_blank">arXiv</a></div></div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-fcc-challenge').classList.add('open')">Jonatas Marques, Alexis Schrubbe, Nicole P. Marwell and Nick Feamster. 2024. "Are We Up to the Challenge? An Analysis of the FCC Broadband Data Collection Fixed Internet Availability Challenges." <em>Proceedings of the 52nd Research Conference on Communications, Information and Internet Policy (TPRC)</em>, Arlington, VA.<div class="pub-links"><a href="https://arxiv.org/abs/2404.04189" target="_blank" onclick="event.stopPropagation()">arXiv</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Jonatas Marques, Alexis Schrubbe, Nicole P. Marwell and Nick Feamster. 2024. "The Hitchhiker's Guide to Analyzing the FCC Broadband Data Collection." <em>Telecommunications Policy Research Conference (TPRC)</em>, pp. 1–10, Washington, DC.</div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-hitchhikers').classList.add('open')">Jonatas Marques, Alexis Schrubbe, Nicole P. Marwell and Nick Feamster. 2024. "The Hitchhiker's Guide to Analyzing the FCC Broadband Data Collection." <em>Telecommunications Policy Research Conference (TPRC)</em>, pp. 1–10, Washington, DC.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Jennifer E. Mosley, Nicole P. Marwell, Emily Claypool and Cameron Day. 2024. "Impact, Equity and Philanthropic Foundations: Can Randomized Controlled Trials Help Account for The Democratic Deficit?" <em>VOLUNTAS: International Journal of Voluntary and Nonprofit Organizations</em>.<div class="pub-links"><a href="https://doi.org/10.1007/s11266-024-00673-4" target="_blank">DOI</a></div></div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-hyperlocal').classList.add('open')">Taveesh Sharma, Jonatas Marques, Nick Feamster and Nicole P. Marwell. 2023. "A First Look at the Spatial and Temporal Variability of Internet Performance Data in Hyperlocal Geographies." <em>Research Conference on Communications, Information, and Internet Policy (TPRC)</em>, pp. 1–6, Washington, DC.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Taveesh Sharma, Jonatas Marques, Nick Feamster and Nicole P. Marwell. 2023. "A First Look at the Spatial and Temporal Variability of Internet Performance Data in Hyperlocal Geographies." <em>Research Conference on Communications, Information, and Internet Policy (TPRC)</em>, pp. 1–6, Washington, DC.</div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-ookla').classList.add('open')">Kyle MacMillan, Tarun Mangla, James Saxon, Nicole P. Marwell and Nick Feamster. 2023. "A Comparative Analysis of Ookla Speedtest and Measurement Lab's Network Diagnostic Test (NDT7)." <em>ACM SIGMETRICS</em>, Orlando, FL.<div class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3579448" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Kyle MacMillan, Tarun Mangla, James Saxon, Nicole P. Marwell and Nick Feamster. 2023. "A Comparative Analysis of Ookla Speedtest and Measurement Lab's Network Diagnostic Test (NDT7)." <em>ACM SIGMETRICS</em>, Orlando, FL.<div class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3579448" target="_blank">DOI</a></div></div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-internet-inequity').classList.add('open')">Kyle MacMillan, Tarun Mangla, Nick Feamster and Nicole P. Marwell. 2022. "Internet Inequity in Chicago: Adoption, Affordability, and Availability." <em>Conference on Communications, Information, and Internet Policy (TPRC)</em>, pp. 1–10, Washington, DC.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Julia Koschinsky, Nicole P. Marwell and Raed Mansour. 2022. "Does Health Service Funding Go Where the Need Is? A Prototype Spatial Access Analysis for New Urban Contracts Data." <em>BMC Health Services Research</em> 22(45):1–12.<div class="pub-links"><a href="https://doi.org/10.1186/s12913-021-07370-8" target="_blank">DOI</a></div></div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-speed-test').classList.add('open')">Kyle MacMillan, Tarun Mangla, Nick Feamster and Nicole P. Marwell. 2022. "Best Practices for Collecting Speed Test Data." <em>Conference on Communications, Information, and Internet Policy (TPRC)</em>, pp. 1–10, Washington, DC.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Kyle MacMillan, Tarun Mangla, Nick Feamster and Nicole P. Marwell. 2022. "Internet Inequity in Chicago: Adoption, Affordability, and Availability." <em>Conference on Communications, Information, and Internet Policy (TPRC)</em>, pp. 1–10, Washington, DC.</div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-benchmarks').classList.add('open')">Nick Feamster and Nicole P. Marwell. 2022. "Benchmarks or Equity? A New Approach to Measuring Internet Performance." <em>Conference on Communications, Information, and Internet Policy (TPRC)</em>, pp. 1–10, Washington, DC.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Kyle MacMillan, Tarun Mangla, Nick Feamster and Nicole P. Marwell. 2022. "Best Practices for Collecting Speed Test Data." <em>Conference on Communications, Information, and Internet Policy (TPRC)</em>, pp. 1–10, Washington, DC.</div></div>
+    <div class="pub-category">Nonprofit Organizations &amp; Urban Governance</div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Nick Feamster and Nicole P. Marwell. 2022. "Benchmarks or Equity? A New Approach to Measuring Internet Performance." <em>Conference on Communications, Information, and Internet Policy (TPRC)</em>, pp. 1–10, Washington, DC.</div></div>
+    <div style="margin-bottom:24px;">
+      <div style="font-size:0.68rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--brass); margin-bottom:16px; padding-bottom:8px; border-bottom:1px solid var(--rule);">Invited Reviews &amp; Overviews</div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Nicole P. Marwell, Erez Aharon Marantz and Delia Baldassarri. 2020. "The Micro-Relations of Urban Governance: Patronage and Partnership." <em>American Journal of Sociology</em> 125: 1559–1601.</div></div>
+      <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-urban-poverty-review').classList.add('open')">Nicole P. Marwell and Shannon Morrissey. 2020. "Organizations and the Governance of Urban Poverty." <em>Annual Review of Sociology</em> 46: 233–250. <span style="font-size:0.72rem; color:var(--brass); font-weight:600; letter-spacing:0.08em; text-transform:uppercase; margin-left:6px;">Invited Review</span><div class="pub-links"><a href="https://doi.org/10.1146/annurev-soc-121919-054708" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Nicole P. Marwell and Shannon Morrissey. 2020. "Organizations and the Governance of Urban Poverty." <em>Annual Review of Sociology</em> 46: 233–250.</div></div>
+      <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-governance-framework').classList.add('open')">Nicole P. Marwell and Maoz Brown. 2020. "Towards a Governance Framework of Government-Nonprofit Relations." Chapter 9 in Walter Powell and Patricia Bromley (eds.), <em>The Nonprofit Sector: A Research Handbook</em>, 3rd Edition. Palo Alto: Stanford University Press. <span style="font-size:0.72rem; color:var(--brass); font-weight:600; letter-spacing:0.08em; text-transform:uppercase; margin-left:6px;">Invited Review</span><div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Jennifer E. Mosley, Nicole P. Marwell and Marci Ybarra. 2019. "Movement is Failing Human Service Organizations, and What Social Work Can Do to Fix It." <em>Human Service Organizations: Management, Leadership and Governance</em> 43, 1: 326–335.</div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-rct-equity').classList.add('open')">Jennifer E. Mosley, Nicole P. Marwell, Emily Claypool and Cameron Day. 2024. "Impact, Equity and Philanthropic Foundations: Can Randomized Controlled Trials Help Account for The Democratic Deficit?" <em>VOLUNTAS: International Journal of Voluntary and Nonprofit Organizations</em>.<div class="pub-links"><a href="https://doi.org/10.1007/s11266-024-00673-4" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Nicole P. Marwell and Thad Calabrese. 2015. "A Deficit Model of Collaborative Governance: Government-Nonprofit Fiscal Relations in the Provision of Child Welfare Services." <em>Journal of Public Administration Research and Theory</em> 25: 1031–1058.</div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-micro-relations').classList.add('open')">Nicole P. Marwell, Erez Aharon Marantz and Delia Baldassarri. 2020. "The Micro-Relations of Urban Governance: Patronage and Partnership." <em>American Journal of Sociology</em> 125: 1559–1601.<div class="pub-links"><a href="https://doi.org/10.1086/709250" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Nicole P. Marwell and Michael McQuarrie. 2013. "People, Place and System: Organizations and the Renewal of Urban Social Theory." <em>Annals of the American Academy of Political and Social Sciences</em>: 126–143.</div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-what-works').classList.add('open')">Jennifer E. Mosley, Nicole P. Marwell and Marci Ybarra. 2019. "Movement is Failing Human Service Organizations, and What Social Work Can Do to Fix It." <em>Human Service Organizations: Management, Leadership and Governance</em> 43, 1: 326–335.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Nicole P. Marwell and Aaron Gullickson. 2013. "Inequality in the Spatial Allocation of Social Services: Government Contracts to New York City Nonprofit Organizations." <em>Social Service Review</em> 87: 319–353.</div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-health-service').classList.add('open')">Julia Koschinsky, Nicole P. Marwell and Raed Mansour. 2022. "Does Health Service Funding Go Where the Need Is? A Prototype Spatial Access Analysis for New Urban Contracts Data." <em>BMC Health Services Research</em> 22(45):1–12.<div class="pub-links"><a href="https://doi.org/10.1186/s12913-021-07370-8" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Michael McQuarrie and Nicole P. Marwell. 2009. "The Missing Organizational Dimension in Urban Sociology." <em>City and Community</em> 8, 3: 247–268.</div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-deficit-model').classList.add('open')">Nicole P. Marwell and Thad Calabrese. 2015. "A Deficit Model of Collaborative Governance: Government-Nonprofit Fiscal Relations in the Provision of Child Welfare Services." <em>Journal of Public Administration Research and Theory</em> 25: 1031–1058.<div class="pub-links"><a href="https://doi.org/10.1093/jopart/muu047" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Nicole P. Marwell and Paul-Brian McInerney. 2005. "The Nonprofit/For-Profit Continuum: Theorizing the Dynamics of Mixed-Form Markets." <em>Nonprofit and Voluntary Sector Quarterly</em> 34, 1: 7–28.</div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-people-place').classList.add('open')">Nicole P. Marwell and Michael McQuarrie. 2013. "People, Place and System: Organizations and the Renewal of Urban Social Theory." <em>Annals of the American Academy of Political and Social Sciences</em>: 126–143.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Nicole P. Marwell. 2004. "Privatizing the Welfare State: Nonprofit Community-Based Organizations as Political Actors." <em>American Sociological Review</em> 69: 265–291.<div class="pub-links"><span style="font-size:0.72rem; color:var(--brass); font-weight:600; letter-spacing:0.08em; text-transform:uppercase;">Winner, Robert E. Park Distinguished Scholarly Article Award, ASA</span></div></div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-inequality-spatial').classList.add('open')">Nicole P. Marwell and Aaron Gullickson. 2013. "Inequality in the Spatial Allocation of Social Services: Government Contracts to New York City Nonprofit Organizations." <em>Social Service Review</em> 87: 319–353.<div class="pub-links"><a href="https://doi.org/10.1086/670910" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-category">Book Chapters</div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-political-change').classList.add('open')">Nicole P. Marwell. 2010. "Political Change and the Institutionalization of the Nonprofit Service Delivery Infrastructure." In Elisabeth Clemens and Doug Guthrie, eds., <em>Politics and Partnerships: Nonprofits and Associations in American Governance</em>, pp. 209–236. Chicago: University of Chicago Press.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Nicole P. Marwell and Maoz Brown. 2020. "Towards a Governance Framework of Government-Nonprofit Relations." Chapter 9 in Walter Powell and Patricia Bromley (eds.), <em>The Nonprofit Sector: A Research Handbook</em>, 3rd Edition. Palo Alto: Stanford University Press.</div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-missing-org').classList.add('open')">Michael McQuarrie and Nicole P. Marwell. 2009. "The Missing Organizational Dimension in Urban Sociology." <em>City and Community</em> 8, 3: 247–268.<div class="pub-links"><a href="https://doi.org/10.1111/j.1540-6040.2009.01288.x" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Nicole P. Marwell. 2010. "Political Change and the Institutionalization of the Nonprofit Service Delivery Infrastructure." In Elisabeth Clemens and Doug Guthrie, eds., <em>Politics and Partnerships: Nonprofits and Associations in American Governance</em>, pp. 209–236. Chicago: University of Chicago Press.</div></div>
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-nonprofit-forprofit').classList.add('open')">Nicole P. Marwell and Paul-Brian McInerney. 2005. "The Nonprofit/For-Profit Continuum: Theorizing the Dynamics of Mixed-Form Markets." <em>Nonprofit and Voluntary Sector Quarterly</em> 34, 1: 7–28.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
+
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-privatizing').classList.add('open')">Nicole P. Marwell. 2004. "Privatizing the Welfare State: Nonprofit Community-Based Organizations as Political Actors." <em>American Sociological Review</em> 69: 265–291.<div class="pub-links"><a href="https://doi.org/10.1177/000312240406900206" target="_blank" onclick="event.stopPropagation()">DOI</a> <span style="font-size:0.72rem; color:var(--brass); font-weight:600; letter-spacing:0.08em; text-transform:uppercase;">Winner, Robert E. Park Distinguished Scholarly Article Award, ASA</span> <span class="pub-read-more">Read more ↓</span></div></div></div>
 
     <div class="pub-item"><div></div><div class="pub-text">Nicole P. Marwell. 2004. "Ethnic and Post-Ethnic Politics in New York City: The Dominican Second Generation." Pp. 257–284 in Philip Kasinitz, Mary Waters, and John Mollenkopf, eds., <em>Becoming New Yorkers: Ethnographies of the New Second Generation</em>. New York: Russell Sage Foundation.</div></div>
+
   </section>
 
-  <section id="cv" class="content-section">
+<section id="cv" class="content-section">
     <div class="section-header">
       <span class="section-eyebrow">Background</span>
       <h2 class="section-title">Curriculum Vitae</h2>
@@ -988,6 +1006,298 @@
 
     <div class="footer">© 2025 Nicole P. Marwell · University of Chicago</div>
 </main>
+
+
+  <!-- PAPER MODALS: Internet Equity -->
+
+  <div class="book-modal-overlay" id="modal-internet-futuring" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-internet-futuring').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">Digital Culture &amp; Society · Forthcoming 2026</div>
+        <div class="book-modal-title">Internet Futuring: How Communities are Connecting Themselves</div>
+        <div class="book-modal-authors">Henna Zamurd Butt, Nicole P. Marwell and Nick Feamster</div>
+        <div class="book-modal-desc">Forthcoming. Abstract available upon request.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-spatial-variation" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-spatial-variation').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">ACM Internet Measurement Conference · Forthcoming 2026</div>
+        <div class="book-modal-title">Characterizing Spatial Variation in Internet Access Latency: A Multilevel Approach</div>
+        <div class="book-modal-authors">Jonatas Marques, Jared N. Schachner, Nicole P. Marwell and Nick Feamster</div>
+        <div class="book-modal-desc">Forthcoming. Abstract available upon request.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-beyond-data-points" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-beyond-data-points').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">ACM SIGMETRICS · 2025</div>
+        <div class="book-modal-title">Beyond Data Points: Regionalizing Crowdsourced Latency Measurements</div>
+        <div class="book-modal-authors">Taveesh Sharma, Paul Schmitt, Francesco Bronzino, Nicole P. Marwell and Nick Feamster</div>
+        <div class="book-modal-desc">Internet performance measurements are typically analyzed at fine-grained geographic levels, but this approach can obscure broader spatial patterns in service quality. This paper develops a regionalization method for crowdsourced latency data, grouping geographic areas by similarity in their internet performance characteristics. Applied to data from a major U.S. city, the approach reveals coherent regional patterns that cut across administrative boundaries and correlate with underlying network infrastructure, offering a new lens for understanding and addressing internet inequity.</div>
+        <a class="book-modal-link" href="https://dl.acm.org/doi/10.1145/3700416" target="_blank">View at ACM Digital Library &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-fcc-challenge" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-fcc-challenge').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">TPRC 52 · 2024</div>
+        <div class="book-modal-title">Are We Up to the Challenge? An Analysis of the FCC Broadband Data Collection Fixed Internet Availability Challenges</div>
+        <div class="book-modal-authors">Jonatas Marques, Alexis Schrubbe, Nicole P. Marwell and Nick Feamster</div>
+        <div class="book-modal-desc">The FCC Broadband Data Collection (BDC) introduced a formal challenge process allowing entities to dispute reported internet availability. This paper provides the first systematic analysis of how that challenge process has functioned in practice, examining who files challenges, what geographic areas they target, and how successful they are. The findings reveal significant gaps in the challenge process that may limit its ability to correct inaccuracies in the BDC data.</div>
+        <a class="book-modal-link" href="https://arxiv.org/abs/2404.04189" target="_blank">View on arXiv &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-hitchhikers" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-hitchhikers').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">TPRC · 2024</div>
+        <div class="book-modal-title">The Hitchhiker&rsquo;s Guide to Analyzing the FCC Broadband Data Collection</div>
+        <div class="book-modal-authors">Jonatas Marques, Alexis Schrubbe, Nicole P. Marwell and Nick Feamster</div>
+        <div class="book-modal-desc">The FCC Broadband Data Collection represents the most comprehensive federal effort to map internet availability in the United States, but working with the data presents significant methodological challenges. This paper provides a practical guide to the structure, limitations, and analytical possibilities of the BDC dataset, offering researchers and policymakers the tools they need to use the data effectively and responsibly.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-hyperlocal" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-hyperlocal').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">TPRC · 2023</div>
+        <div class="book-modal-title">A First Look at the Spatial and Temporal Variability of Internet Performance Data in Hyperlocal Geographies</div>
+        <div class="book-modal-authors">Taveesh Sharma, Jonatas Marques, Nick Feamster and Nicole P. Marwell</div>
+        <div class="book-modal-desc">Internet performance can vary substantially over short distances and time periods, yet most research aggregates measurements at relatively coarse geographic scales. This paper examines the spatial and temporal variability of internet performance data at hyperlocal levels — census blocks and sub-block geographies — revealing patterns of inequality that larger-scale analyses may miss, and raising important questions about the appropriate unit of analysis for broadband equity research.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-ookla" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-ookla').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">ACM SIGMETRICS · 2023</div>
+        <div class="book-modal-title">A Comparative Analysis of Ookla Speedtest and Measurement Lab&rsquo;s Network Diagnostic Test (NDT7)</div>
+        <div class="book-modal-authors">Kyle MacMillan, Tarun Mangla, James Saxon, Nicole P. Marwell and Nick Feamster</div>
+        <div class="book-modal-desc">Speed tests are widely used to measure internet performance, but different tools can yield very different results. This paper offers the first rigorous side-by-side comparison of two of the most commonly used speed test platforms — Ookla Speedtest and Measurement Lab&rsquo;s NDT7 — examining how they differ in methodology, user base, and measured outcomes, and what those differences mean for research and policy applications.</div>
+        <a class="book-modal-link" href="https://dl.acm.org/doi/10.1145/3579448" target="_blank">View at ACM Digital Library &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-internet-inequity" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-internet-inequity').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">TPRC · 2022</div>
+        <div class="book-modal-title">Internet Inequity in Chicago: Adoption, Affordability, and Availability</div>
+        <div class="book-modal-authors">Kyle MacMillan, Tarun Mangla, Nick Feamster and Nicole P. Marwell</div>
+        <div class="book-modal-desc">This paper documents the dimensions of internet inequality in Chicago across three domains: adoption (who has internet service), affordability (who can afford adequate service), and availability (where fast service is offered). Using a combination of survey data, FCC data, and network measurements, the paper shows that these three dimensions do not always align, and that addressing internet inequity requires policies targeted at each dimension separately.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-speed-test" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-speed-test').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">TPRC · 2022</div>
+        <div class="book-modal-title">Best Practices for Collecting Speed Test Data</div>
+        <div class="book-modal-authors">Kyle MacMillan, Tarun Mangla, Nick Feamster and Nicole P. Marwell</div>
+        <div class="book-modal-desc">Speed test data is widely used in broadband policy and research, but the quality and comparability of such data depends heavily on how it is collected. This paper develops and evaluates a set of best practices for speed test data collection, addressing questions of sampling, instrumentation, timing, and reporting that can significantly affect the validity of findings.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-benchmarks" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-benchmarks').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">TPRC · 2022</div>
+        <div class="book-modal-title">Benchmarks or Equity? A New Approach to Measuring Internet Performance</div>
+        <div class="book-modal-authors">Nick Feamster and Nicole P. Marwell</div>
+        <div class="book-modal-desc">Current approaches to measuring internet performance focus on whether service meets fixed technical benchmarks, such as minimum upload and download speeds. This paper argues that such benchmark-based approaches fail to capture the internet equity dimensions of performance, and proposes an equity-centered framework for measurement that considers who gets what quality of service relative to others in their community and city.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAPER MODALS: Nonprofit Organizations & Urban Governance -->
+
+  <div class="book-modal-overlay" id="modal-urban-poverty-review" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-urban-poverty-review').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">Annual Review of Sociology · 2020 &nbsp;·&nbsp; <span style="color:var(--brass);">Invited Review</span></div>
+        <div class="book-modal-title">Organizations and the Governance of Urban Poverty</div>
+        <div class="book-modal-authors">Nicole P. Marwell and Shannon Morrissey</div>
+        <div class="book-modal-desc">Many recent sociological studies of urban poverty have drawn inspiration from the Chicago School model of social disorganization. Studies of urban poverty and formal organizations have been profoundly shaped by this theoretical perspective, casting organizations as components of neighborhoods and thus relevant for study as potential contributors to neighborhood social control. We argue that this approach obscures many ways in which formal organizations are involved in the production and management of urban poverty. In order to take advantage of the many insights offered by sociological studies of organizations, we propose that students of urban poverty expand their theoretical perspective on formal organizations. We develop such an approach, an amalgamation of key concepts from two existing theoretical frameworks rarely discussed in urban poverty studies: urban governance and strategic action fields. This perspective offers new directions for research on urban poverty and urges greater integration with related studies from political science and geography.</div>
+        <a class="book-modal-link" href="https://doi.org/10.1146/annurev-soc-121919-054708" target="_blank">View at Annual Reviews &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-governance-framework" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-governance-framework').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">The Nonprofit Sector: A Research Handbook, 3rd Ed. · 2020 &nbsp;·&nbsp; <span style="color:var(--brass);">Invited Review</span></div>
+        <div class="book-modal-title">Towards a Governance Framework of Government-Nonprofit Relations</div>
+        <div class="book-modal-authors">Nicole P. Marwell and Maoz Brown</div>
+        <div class="book-modal-desc">Modern theory on government-nonprofit relations has largely been driven by economic frameworks that center resource dependence and voluntary failure. This chapter proposes a governance framework as an alternative, drawing on political science and organizational sociology to situate government-nonprofit relations within the broader structures of urban governance. The framework highlights how relations between governments and nonprofits are shaped by political context, territorial fragmentation, and the strategic action of organizational actors, offering new directions for both theory and empirical research.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-rct-equity" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-rct-equity').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">VOLUNTAS · 2024</div>
+        <div class="book-modal-title">Impact, Equity and Philanthropic Foundations: Can Randomized Controlled Trials Help Account for The Democratic Deficit?</div>
+        <div class="book-modal-authors">Jennifer E. Mosley, Nicole P. Marwell, Emily Claypool and Cameron Day</div>
+        <div class="book-modal-desc">Philanthropic foundations in the USA have long wrestled with how to demonstrate they contribute to the public good in a democratic society given the outsized voice their wealth provides. Evaluating the work of their grantees is one way that foundations can demonstrate what that contribution is. This paper examines whether the use of randomized controlled trials in philanthropic evaluation can address concerns about democratic accountability, finding that while RCTs may improve certain accountability dimensions, they introduce new equity concerns that limit their democratic potential.</div>
+        <a class="book-modal-link" href="https://doi.org/10.1007/s11266-024-00673-4" target="_blank">View at VOLUNTAS &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-micro-relations" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-micro-relations').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">American Journal of Sociology · 2020</div>
+        <div class="book-modal-title">The Micro-Relations of Urban Governance: Patronage and Partnership</div>
+        <div class="book-modal-authors">Nicole P. Marwell, Erez Aharon Marantz and Delia Baldassarri</div>
+        <div class="book-modal-desc">The classic urban ecological paradigm envisioned the articulation of the social organization of neighborhoods with that of the city as a whole. This article offers novel empirical evidence in support of this proposition. We analyze the microrelations of governance across two key urban domains, politics and nonprofit organizations, and identify the district-based politician as a key actor linking neighborhood-based and citywide forms of social organization. Using data on contracts allocated by city council members to nonprofits in New York City, analysis of the social network system linking these two types of actors shows two distinct relational dynamics: a patronage dynamic characterized by exclusive and long-lasting relationships between a council member and his/her local constituency, and a partnership dynamic characterized by citywide relationships that are short-lived and fostered by organizational differentiation and embeddedness.</div>
+        <a class="book-modal-link" href="https://doi.org/10.1086/709250" target="_blank">View at American Journal of Sociology &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-what-works" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-what-works').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">Human Service Organizations: Management, Leadership and Governance · 2019</div>
+        <div class="book-modal-title">Movement is Failing Human Service Organizations, and What Social Work Can Do to Fix It</div>
+        <div class="book-modal-authors">Jennifer E. Mosley, Nicole P. Marwell and Marci Ybarra</div>
+        <div class="book-modal-desc">The "what works" movement — the push to evaluate human service programs using rigorous experimental methods — has transformed the funding landscape for nonprofit human service organizations. This paper argues that the movement as currently implemented is failing these organizations, imposing heavy evaluation burdens while failing to generate knowledge that improves practice. The paper identifies the movement's key failings and proposes a social work-centered alternative that prioritizes organizational learning and equity over narrow experimental designs.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-health-service" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-health-service').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">BMC Health Services Research · 2022</div>
+        <div class="book-modal-title">Does Health Service Funding Go Where the Need Is? A Prototype Spatial Access Analysis for New Urban Contracts Data</div>
+        <div class="book-modal-authors">Julia Koschinsky, Nicole P. Marwell and Raed Mansour</div>
+        <div class="book-modal-desc">Publicly funded social services are an increasingly important component of social provision spending, accounting for approximately one-fifth of today&rsquo;s welfare state expenditures. These funds are often allocated through purchase of service contracts between state and municipal agencies and third-party providers, usually nonprofit organizations. This study uses a unique dataset of government contracts with nonprofit organizations in New York City to study the relationship between the allocation of social services funding across neighborhoods and neighborhood need, distinguishing between local organizations serving their immediate neighborhoods and distributive organizations serving multiple neighborhoods.</div>
+        <a class="book-modal-link" href="https://doi.org/10.1186/s12913-021-07370-8" target="_blank">View at BMC Health Services Research &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-deficit-model" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-deficit-model').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">Journal of Public Administration Research and Theory · 2015</div>
+        <div class="book-modal-title">A Deficit Model of Collaborative Governance: Government-Nonprofit Fiscal Relations in the Provision of Child Welfare Services</div>
+        <div class="book-modal-authors">Nicole P. Marwell and Thad Calabrese</div>
+        <div class="book-modal-desc">Much existing scholarship on nonprofit organizations&rsquo; receipt of government funds appears to assume that there is something highly problematic about this relationship. In this article, rather than examining how public funds constrain private action, we inquire about how government deploys private organizations, via the mechanism of government funding, to secure a public good. Using a case study of the nonprofit child welfare sector in New York State, we theorize a deficit model of collaborative governance in which nonprofits have been deputized by the state to secure children&rsquo;s social rights but do not receive sufficient resources to cover the costs of securing those rights.</div>
+        <a class="book-modal-link" href="https://doi.org/10.1093/jopart/muu047" target="_blank">View at JPART &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-people-place" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-people-place').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">Annals of the American Academy of Political and Social Sciences · 2013</div>
+        <div class="book-modal-title">People, Place and System: Organizations and the Renewal of Urban Social Theory</div>
+        <div class="book-modal-authors">Nicole P. Marwell and Michael McQuarrie</div>
+        <div class="book-modal-desc">This article offers a theoretical framework for thinking about how organizations matter for the production, reproduction, and amelioration of urban poverty. Drawing on the classical concept of integration in both its social and systemic versions, it develops an approach to urban organizational analysis that takes seriously both the territorial embeddedness of organizations and their participation in city- and field-level dynamics that extend beyond any single neighborhood.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-inequality-spatial" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-inequality-spatial').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">Social Service Review · 2013</div>
+        <div class="book-modal-title">Inequality in the Spatial Allocation of Social Services: Government Contracts to New York City Nonprofit Organizations</div>
+        <div class="book-modal-authors">Nicole P. Marwell and Aaron Gullickson</div>
+        <div class="book-modal-desc">Publicly funded social services are an increasingly important component of social provision spending, accounting for approximately one-fifth of today&rsquo;s welfare state expenditures. These funds are often allocated through purchase of service contracts between state and municipal agencies and third-party providers, usually nonprofit organizations. This study uses a unique dataset of government contracts with nonprofit organizations in New York City between 1997 and 2001 to study the relationship between the allocation of social services funding across neighborhoods and neighborhood need. Overall, contract dollars allocated are positively associated with socioeconomic disadvantage, although distributive organizations are less likely to be physically located in needy neighborhoods.</div>
+        <a class="book-modal-link" href="https://doi.org/10.1086/670910" target="_blank">View at Social Service Review &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-political-change" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-political-change').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">Politics and Partnerships, University of Chicago Press · 2010</div>
+        <div class="book-modal-title">Political Change and the Institutionalization of the Nonprofit Service Delivery Infrastructure</div>
+        <div class="book-modal-authors">Nicole P. Marwell</div>
+        <div class="book-modal-desc">This chapter examines how the privatization of welfare state functions in the United States produced an extensive nonprofit service delivery infrastructure, and how this infrastructure has become institutionalized over time. Drawing on the case of New York City, it traces how political change — particularly the shift toward contracting-out in the 1970s through 1990s — reshaped the organizational landscape of social service provision, creating a dense system of community-based organizations deeply intertwined with local government.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-missing-org" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-missing-org').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">City &amp; Community · 2009</div>
+        <div class="book-modal-title">The Missing Organizational Dimension in Urban Sociology</div>
+        <div class="book-modal-authors">Michael McQuarrie and Nicole P. Marwell</div>
+        <div class="book-modal-desc">This article takes issue with the treatment of organizations in much urban sociology. We argue that both Marxian political economists and Chicagoan ethnographers and quantitative analysts treat organizations as derivative rather than productive of urban social life. As a result, urban sociologists have failed to develop adequate theoretical tools for understanding the role of formal organizations in structuring city life. We propose a corrective approach that takes organizations seriously as active producers of urban outcomes, rather than mere expressions of larger economic or cultural forces.</div>
+        <a class="book-modal-link" href="https://doi.org/10.1111/j.1540-6040.2009.01288.x" target="_blank">View at City &amp; Community &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-nonprofit-forprofit" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-nonprofit-forprofit').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">Nonprofit and Voluntary Sector Quarterly · 2005</div>
+        <div class="book-modal-title">The Nonprofit/For-Profit Continuum: Theorizing the Dynamics of Mixed-Form Markets</div>
+        <div class="book-modal-authors">Nicole P. Marwell and Paul-Brian McInerney</div>
+        <div class="book-modal-desc">The boundaries between nonprofit and for-profit organizations are increasingly blurred as each organizational form adopts features of the other. This paper theorizes the dynamics of mixed-form markets in which nonprofits and for-profits compete and collaborate, drawing on organization theory and economic sociology to explain why mixed markets emerge, how they are structured, and what consequences they have for service quality, access, and equity.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-modal-overlay" id="modal-privatizing" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-privatizing').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">American Sociological Review · 2004 &nbsp;·&nbsp; <span style="color:var(--brass);">Winner, Robert E. Park Distinguished Scholarly Article Award, ASA</span></div>
+        <div class="book-modal-title">Privatizing the Welfare State: Nonprofit Community-Based Organizations as Political Actors</div>
+        <div class="book-modal-authors">Nicole P. Marwell</div>
+        <div class="book-modal-desc">This paper examines a form of state social provision that has been neglected by current sociological theory: publicly funded supportive services. Federal policies of privatization and devolution, embraced since the Reagan years, have made private, nonprofit organizations the primary deliverers of these services. Public supportive services are distributed via competitive state- and local-level allocative processes that send government contracts to specific nonprofit community-based organizations (CBOs), which in turn serve specific neighborhoods and individuals. The paper describes a model by which CBOs generate greater contract revenues by adding electoral politics to their more traditional roles of providing services and building communities — producing a new kind of CBO: the machine politics CBO.</div>
+        <a class="book-modal-link" href="https://doi.org/10.1177/000312240406900206" target="_blank">View at American Sociological Review &rarr;</a>
+      </div>
+    </div>
+  </div>
 
   <!-- BOOK MODAL: Mismeasuring Impact -->
   <div class="book-modal-overlay" id="modal-mismeasuring" onclick="if(event.target===this)this.classList.remove('open')">
