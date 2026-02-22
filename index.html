@@ -485,7 +485,127 @@
       letter-spacing: 0.05em;
     }
 
-    /* ── ANIMATIONS ────────────────────────────────────────── */
+    /* ── BOOK MODALS ───────────────────────────────────────── */
+    .book-title-link {
+      cursor: pointer;
+      text-decoration: underline;
+      text-decoration-color: rgba(201,168,76,0.4);
+      text-underline-offset: 3px;
+      transition: text-decoration-color 0.2s;
+    }
+    .book-title-link:hover { text-decoration-color: var(--brass); }
+
+    .book-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .book-modal-overlay.open { display: flex; }
+
+    .book-modal {
+      background: var(--off-white);
+      max-width: 640px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 0;
+    }
+
+    .book-modal-cover {
+      background: var(--deep);
+      min-height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .book-modal-cover img {
+      width: 160px;
+      display: block;
+      object-fit: cover;
+    }
+    .book-modal-cover .cover-placeholder {
+      color: rgba(255,255,255,0.3);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 16px;
+    }
+
+    .book-modal-body {
+      padding: 32px 28px;
+    }
+
+    .book-modal-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 8px;
+    }
+
+    .book-modal-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      color: var(--deep);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .book-modal-authors {
+      font-size: 0.83rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .book-modal-desc {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: #3a3a3a;
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+
+    .book-modal-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      background: var(--deep);
+      color: var(--brass);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .book-modal-link:hover { background: var(--mid); }
+
+    .book-modal-close {
+      position: absolute;
+      top: 12px; right: 16px;
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      color: var(--muted);
+      cursor: pointer;
+      line-height: 1;
+      z-index: 10;
+    }
+    .book-modal-close:hover { color: var(--deep); }
+
+    @media (max-width: 560px) {
+      .book-modal { grid-template-columns: 1fr; }
+      .book-modal-cover { min-height: 160px; }
+    }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(16px); }
       to { opacity: 1; transform: translateY(0); }
@@ -581,15 +701,15 @@
 
     <div class="pub-category">Books</div>
 
-    <div class="book-card">
+    <div class="book-card" onclick="document.getElementById('modal-mismeasuring').classList.add('open')" style="cursor:pointer;">
       <div class="book-label">Most Recent Book · 2025</div>
-      <div class="book-title">Mismeasuring Impact: How Randomized Controlled Trials Threaten the Nonprofit Sector</div>
+      <div class="book-title book-title-link">Mismeasuring Impact: How Randomized Controlled Trials Threaten the Nonprofit Sector</div>
       <div class="book-meta">Nicole P. Marwell and Jennifer E. Mosley. Stanford University Press, 2025.</div>
     </div>
 
-    <div class="book-card">
+    <div class="book-card" onclick="document.getElementById('modal-bargaining').classList.add('open')" style="cursor:pointer;">
       <div class="book-label">Book · 2007</div>
-      <div class="book-title">Bargaining for Brooklyn: Community Organizations in the Entrepreneurial City</div>
+      <div class="book-title book-title-link">Bargaining for Brooklyn: Community Organizations in the Entrepreneurial City</div>
       <div class="book-meta">Nicole P. Marwell. University of Chicago Press, 2007.</div>
       <div class="book-note">Honorable Mention, Robert E. Park Distinguished Scholarly Book Award, ASA Community and Urban Sociology Section</div>
     </div>
@@ -866,7 +986,64 @@
     </div>
   </section>
 
-  <div class="footer">© 2025 Nicole P. Marwell · University of Chicago</div>
+    <div class="footer">© 2025 Nicole P. Marwell · University of Chicago</div>
 </main>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><scri
+  <!-- BOOK MODAL: Mismeasuring Impact -->
+  <div class="book-modal-overlay" id="modal-mismeasuring" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal">
+      <button class="book-modal-close" onclick="document.getElementById('modal-mismeasuring').classList.remove('open')">&times;</button>
+      <div class="book-modal-cover">
+        <img src="mismeasuring-cover.jpg" alt="Mismeasuring Impact cover" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <div class="cover-placeholder" style="display:none;">Cover image<br>coming soon</div>
+      </div>
+      <div class="book-modal-body">
+        <div class="book-modal-label">Stanford University Press · 2025</div>
+        <div class="book-modal-title">Mismeasuring Impact: How Randomized Controlled Trials Threaten the Nonprofit Sector</div>
+        <div class="book-modal-authors">Nicole P. Marwell and Jennifer E. Mosley</div>
+        <div class="book-modal-desc">The need to demonstrate the effectiveness of nonprofit social programs has led to a rapid rise in the use of randomized controlled trials (RCTs) for evaluation. As a result, most nonprofit sector professionals can tell you why nonprofits should do an RCT. This book tells you why they probably should not, and what to do instead. Mismeasuring Impact explores why RCTs are being embraced as the &ldquo;gold standard&rdquo; for nonprofit evaluation, despite the high cost and time investment required and the serious problems with using RCTs in a nonprofit context. The book describes what happens inside nonprofits when they take part in RCTs, the unintended equity issues that arise, and why nonprofits feel pressured to participate despite the problems. Based on extensive interviews with nonprofit managers, professional program evaluators, and program officers in philanthropic foundations, the book argues that RCTs are used to poorly ground nonprofit legitimacy, not to foster nonprofit improvement. Mismeasuring Impact offers alternative approaches that build strong organizations, not just cookie-cutter programs.</div>
+        <a class="book-modal-link" href="https://www.sup.org/books/mismeasuring-impact" target="_blank">View at Stanford University Press &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOK MODAL: Bargaining for Brooklyn -->
+  <div class="book-modal-overlay" id="modal-bargaining" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal">
+      <button class="book-modal-close" onclick="document.getElementById('modal-bargaining').classList.remove('open')">&times;</button>
+      <div class="book-modal-cover">
+        <img src="bargaining-cover.jpg" alt="Bargaining for Brooklyn cover" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <div class="cover-placeholder" style="display:none;">Cover image<br>coming soon</div>
+      </div>
+      <div class="book-modal-body">
+        <div class="book-modal-label">University of Chicago Press · 2007</div>
+        <div class="book-modal-title">Bargaining for Brooklyn: Community Organizations in the Entrepreneurial City</div>
+        <div class="book-modal-authors">Nicole P. Marwell</div>
+        <div class="book-modal-desc">When middle-class residents fled American cities in the 1960s and 1970s, government services and investment capital left too. Countless urban neighborhoods thus entered phases of precipitous decline, prompting the creation of community-based organizations that sought to bring direly needed resources back to the inner city. Today there are tens of thousands of these CBOs&mdash;private nonprofit groups that work diligently within tight budgets to give assistance and opportunity to our most vulnerable citizens by providing services such as housing, child care, and legal aid. Through ethnographic fieldwork at eight CBOs in the Brooklyn neighborhoods of Williamsburg and Bushwick, Nicole P. Marwell discovered that the complex and contentious relationships these groups form with larger economic and political institutions outside the neighborhood have a huge and unexamined impact on the lives of the poor. Most studies of urban poverty focus on individuals or families, but Bargaining for Brooklyn widens the lens, examining the organizations whose actions and decisions collectively drive urban life.</div>
+        <a class="book-modal-link" href="https://press.uchicago.edu/ucp/books/book/chicago/B/bo4299967.html" target="_blank">View at University of Chicago Press &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.sidebar nav a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        const active = document.querySelector('.sidebar nav a[href="#' + entry.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  sections.forEach(s => observer.observe(s));
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.book-modal-overlay.open').forEach(m => m.classList.remove('open'));
+    }
+  });
+</script>
+</body>
+</html>
