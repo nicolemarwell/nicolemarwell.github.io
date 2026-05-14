@@ -729,6 +729,8 @@
 
     <div class="pub-category">Internet Equity</div>
 
+    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-less-is-more').classList.add('open')">Taveesh Sharma, Andrew Chu, Paul Schmitt, Francesco Bronzino, Nicole P. Marwell and Nick Feamster. 2026. "Less is More: Optimizing Probe Selection Using Shared Latency Anomalies." <em>Proceedings of the ACM on Networking</em> 4, CoNEXT2, Article 18.<div class="pub-links"><a href="https://doi.org/10.1145/3808666" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
+
     <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-internet-futuring').classList.add('open')">Henna Zamurd Butt, Nicole P. Marwell and Nick Feamster. Forthcoming (2026). "Internet Futuring: How Communities are Connecting Themselves." <em>Digital Culture &amp; Society</em> 11, 1.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
 
     <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-spatial-variation').classList.add('open')">Jonatas Marques, Jared N. Schachner, Nicole P. Marwell and Nick Feamster. Forthcoming (2026). "Characterizing Spatial Variation in Internet Access Latency: A Multilevel Approach." <em>ACM Internet Measurement Conference</em>.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
@@ -1009,6 +1011,20 @@
     <div class="footer">© 2025 Nicole P. Marwell · University of Chicago</div>
 </main>
 
+
+  <!-- PAPER MODAL: Less is More -->
+  <div class="book-modal-overlay" id="modal-less-is-more" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="book-modal" style="grid-template-columns:1fr;">
+      <button class="book-modal-close" onclick="document.getElementById('modal-less-is-more').classList.remove('open')">&times;</button>
+      <div class="book-modal-body">
+        <div class="book-modal-label">Proceedings of the ACM on Networking · 2026</div>
+        <div class="book-modal-title">Less is More: Optimizing Probe Selection Using Shared Latency Anomalies</div>
+        <div class="book-modal-authors">Taveesh Sharma, Andrew Chu, Paul Schmitt, Francesco Bronzino, Nicole P. Marwell and Nick Feamster</div>
+        <div class="book-modal-desc">Latency anomalies — persistent or transient increases in round-trip time (RTT) — are a common feature of residential Internet performance. When multiple users simultaneously experience anomalies at the same destination, it may indicate shared infrastructure issues, routing behavior, or congestion. However, inferring such shared behavior is challenging in practice, because the magnitude of these anomalies can vary significantly across devices even within the same ISP and geographic area, and detailed network topology information is often unavailable due to platform limitations or privacy constraints. This paper studies whether devices that experience a shared latency anomaly observe similar changes in RTT magnitude using a topology-agnostic approach. Using a four-month dataset of high-frequency RTT measurements from 99 residential probes in Chicago, the authors detect shared anomalies and analyze their consistency in amplitude and duration without relying on traceroutes or explicit path information. They find that many shared anomalies affect users similarly in amplitude, particularly within the same ISP, and develop a sampling algorithm that reduces redundancy in detected anomalies by selecting representative devices under user-defined constraints. The approach covers 95% of aggregate anomaly impact with less than half the total probes used in the deployment.</div>
+        <a class="book-modal-link" href="https://doi.org/10.1145/3808666" target="_blank">View at ACM Digital Library &rarr;</a>
+      </div>
+    </div>
+  </div>
 
   <!-- PAPER MODALS: Internet Equity -->
 
