@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nicole P. Marwell | University of Chicago</title>
-  <meta name="description" content="Sociologist at University of Chicago Crown Family School studying urban governance, nonprofit organizations, internet equity, and AI governance. Author of Mismeasuring Impact (Stanford University Press, 2025)." />
+  <meta name="description" content="Professor of sociology at UChicago studying urban governance, nonprofit organizations, internet equity, and AI governance. Author of Mismeasuring Impact (Stanford University Press, 2025)." />
   <meta property="og:title" content="Nicole P. Marwell | University of Chicago" />
   <meta property="og:description" content="Professor at the University of Chicago Crown Family School researching urban governance, nonprofit organizations, internet equity, and AI governance. Author of Mismeasuring Impact (Stanford University Press, 2025)." />
   <meta property="og:type" content="website" />
@@ -35,16 +35,17 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --deep: #1f1a17;
-      --forest: #241f1a;
-      --mid: #8b4a3c;
-      --brass: #c4736a;
-      --brass-light: #d9907f;
-      --cream: #f0ebe0;
-      --off-white: #f7f3ee;
+      --deep: #047857;
+      --forest: #065f46;
+      --mid: #b45309;
+      --brass: #d97706;
+      --brass-light: #f59e0b;
+      --cream: #f0fdf4;
+      --off-white: #fafafa;
       --text: #1a1a1a;
-      --muted: #7a6e69;
-      --rule: #e0d8cf;
+      --muted: #6b7280;
+      --rule: #e5e7eb;
+      --red: #b91c1c;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -54,7 +55,7 @@
       font-family: 'DM Sans', sans-serif;
       background: var(--off-white);
       color: var(--text);
-      font-size: 17px;
+      font-size: 19px;
       line-height: 1.8;
     }
 
@@ -76,8 +77,8 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-image: radial-gradient(circle at 20% 80%, rgba(196,115,106,0.08) 0%, transparent 60%),
-                        radial-gradient(circle at 80% 20%, rgba(55,35,28,0.4) 0%, transparent 50%);
+      background-image: radial-gradient(circle at 20% 80%, rgba(217,119,6,0.12) 0%, transparent 60%),
+                        radial-gradient(circle at 80% 20%, rgba(6,95,70,0.5) 0%, transparent 50%);
       pointer-events: none;
     }
 
@@ -172,7 +173,7 @@
       top: -80px; right: -80px;
       width: 500px; height: 500px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(196,115,106,0.12) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(217,119,6,0.15) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -215,13 +216,13 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--brass);
-      border: 1px solid rgba(201,168,76,0.35);
+      border: 1px solid rgba(217,119,6,0.4);
       padding: 4px 12px;
     }
 
     .hero-inner h1 {
       font-family: 'DM Serif Display', serif;
-      font-size: 3.2rem;
+      font-size: 3.8rem;
       line-height: 1.1;
       color: #fff;
       margin-bottom: 12px;
@@ -295,38 +296,69 @@
 
     /* ── PUBLICATIONS ──────────────────────────────────────── */
     .pub-category {
-      font-size: 0.7rem;
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--deep);
+      margin: 56px 0 0;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--deep);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .pub-category:first-of-type { margin-top: 8px; }
+
+    .pub-item {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 0 20px;
+      padding: 26px 0;
+      border-bottom: 1px solid var(--rule);
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .pub-item:hover { opacity: 0.65; }
+    .pub-year {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--brass);
+      padding-top: 4px;
+      text-align: right;
+    }
+    .pub-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--deep);
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+    .pub-byline {
+      font-size: 0.84rem;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.55;
+    }
+    .pub-award {
+      display: block;
+      font-size: 0.67rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-top: 5px;
+    }
+    .pub-subcategory {
+      font-size: 0.68rem;
       font-weight: 600;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--muted);
-      margin: 36px 0 16px;
+      margin: 32px 0 0;
       padding-bottom: 8px;
       border-bottom: 1px solid var(--rule);
     }
-    .pub-category:first-of-type { margin-top: 0; }
-
-    .pub-item {
-      display: block;
-      background: #fff;
-      border: 1px solid var(--rule);
-      border-left: 4px solid var(--rule);
-      padding: 18px 22px;
-      margin-bottom: 10px;
-      transition: border-left-color 0.2s, box-shadow 0.2s;
-    }
-    .pub-item > div:first-child { display: none; }
-    .pub-item:hover {
-      border-left-color: var(--brass);
-      box-shadow: 0 2px 16px rgba(31,26,23,0.07);
-    }
-
-    .pub-text {
-      font-size: 0.97rem;
-      color: #3a3a3a;
-      line-height: 1.7;
-    }
-    .pub-text em { color: var(--deep); font-style: italic; }
 
     .pub-links { margin-top: 5px; display: flex; gap: 14px; }
     .pub-links a {
@@ -531,7 +563,7 @@
     .book-title-link {
       cursor: pointer;
       text-decoration: underline;
-      text-decoration-color: rgba(201,168,76,0.4);
+      text-decoration-color: rgba(217,119,6,0.4);
       text-underline-offset: 3px;
       transition: text-decoration-color 0.2s;
     }
@@ -818,63 +850,238 @@
 
     <div class="pub-category">Internet Equity</div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-less-is-more').classList.add('open')">Taveesh Sharma, Andrew Chu, Paul Schmitt, Francesco Bronzino, Nicole P. Marwell and Nick Feamster. 2026. "Less is More: Optimizing Probe Selection Using Shared Latency Anomalies." <em>Proceedings of the ACM on Networking</em> 4, CoNEXT2, Article 18.<div class="pub-links"><a href="https://doi.org/10.1145/3808666" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-less-is-more').classList.add('open')">
+      <div class="pub-year">2026</div>
+      <div>
+        <div class="pub-title">Less is More: Optimizing Probe Selection Using Shared Latency Anomalies</div>
+        <div class="pub-byline">Taveesh Sharma, Andrew Chu, Paul Schmitt, Francesco Bronzino, Nicole P. Marwell and Nick Feamster · <em>Proceedings of the ACM on Networking</em> 4, CoNEXT2, Article 18</div>
+        <div class="pub-links"><a href="https://doi.org/10.1145/3808666" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-internet-futuring').classList.add('open')">Henna Zamurd Butt, Nicole P. Marwell and Nick Feamster. Forthcoming (2026). "Internet Futuring: How Communities are Connecting Themselves." <em>Digital Culture &amp; Society</em> 11, 1.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-internet-futuring').classList.add('open')">
+      <div class="pub-year">2026</div>
+      <div>
+        <div class="pub-title">Internet Futuring: How Communities are Connecting Themselves</div>
+        <div class="pub-byline">Henna Zamurd Butt, Nicole P. Marwell and Nick Feamster · <em>Digital Culture &amp; Society</em> 11, 1 · Forthcoming</div>
+        <div class="pub-links"><span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-spatial-variation').classList.add('open')">Jonatas Marques, Jared N. Schachner, Nicole P. Marwell and Nick Feamster. Forthcoming (2026). "Characterizing Spatial Variation in Internet Access Latency: A Multilevel Approach." <em>ACM Internet Measurement Conference</em>.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-spatial-variation').classList.add('open')">
+      <div class="pub-year">2026</div>
+      <div>
+        <div class="pub-title">Characterizing Spatial Variation in Internet Access Latency: A Multilevel Approach</div>
+        <div class="pub-byline">Jonatas Marques, Jared N. Schachner, Nicole P. Marwell and Nick Feamster · <em>ACM Internet Measurement Conference</em> · Forthcoming</div>
+        <div class="pub-links"><span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-beyond-data-points').classList.add('open')">Taveesh Sharma, Paul Schmitt, Francesco Bronzino, Nicole P. Marwell and Nick Feamster. 2025. "Beyond Data Points: Regionalizing Crowdsourced Latency Measurements." <em>ACM SIGMETRICS</em>, pp. 1–14, Stony Brook, NY.<div class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3700416" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-beyond-data-points').classList.add('open')">
+      <div class="pub-year">2025</div>
+      <div>
+        <div class="pub-title">Beyond Data Points: Regionalizing Crowdsourced Latency Measurements</div>
+        <div class="pub-byline">Taveesh Sharma, Paul Schmitt, Francesco Bronzino, Nicole P. Marwell and Nick Feamster · <em>ACM SIGMETRICS</em>, pp. 1–14, Stony Brook, NY</div>
+        <div class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3700416" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-fcc-challenge').classList.add('open')">Jonatas Marques, Alexis Schrubbe, Nicole P. Marwell and Nick Feamster. 2024. "Are We Up to the Challenge? An Analysis of the FCC Broadband Data Collection Fixed Internet Availability Challenges." <em>Proceedings of the 52nd Research Conference on Communications, Information and Internet Policy (TPRC)</em>, Arlington, VA.<div class="pub-links"><a href="https://arxiv.org/abs/2404.04189" target="_blank" onclick="event.stopPropagation()">arXiv</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-fcc-challenge').classList.add('open')">
+      <div class="pub-year">2024</div>
+      <div>
+        <div class="pub-title">Are We Up to the Challenge? An Analysis of the FCC Broadband Data Collection Fixed Internet Availability Challenges</div>
+        <div class="pub-byline">Jonatas Marques, Alexis Schrubbe, Nicole P. Marwell and Nick Feamster · <em>Proceedings of the 52nd Research Conference on Communications, Information and Internet Policy (TPRC)</em>, Arlington, VA</div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2404.04189" target="_blank" onclick="event.stopPropagation()">arXiv</a> <span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-hitchhikers').classList.add('open')">Jonatas Marques, Alexis Schrubbe, Nicole P. Marwell and Nick Feamster. 2024. "The Hitchhiker's Guide to Analyzing the FCC Broadband Data Collection." <em>Telecommunications Policy Research Conference (TPRC)</em>, pp. 1–10, Washington, DC.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-hitchhikers').classList.add('open')">
+      <div class="pub-year">2024</div>
+      <div>
+        <div class="pub-title">The Hitchhiker's Guide to Analyzing the FCC Broadband Data Collection</div>
+        <div class="pub-byline">Jonatas Marques, Alexis Schrubbe, Nicole P. Marwell and Nick Feamster · <em>Telecommunications Policy Research Conference (TPRC)</em>, pp. 1–10, Washington, DC</div>
+        <div class="pub-links"><span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-hyperlocal').classList.add('open')">Taveesh Sharma, Jonatas Marques, Nick Feamster and Nicole P. Marwell. 2023. "A First Look at the Spatial and Temporal Variability of Internet Performance Data in Hyperlocal Geographies." <em>Research Conference on Communications, Information, and Internet Policy (TPRC)</em>, pp. 1–6, Washington, DC.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-hyperlocal').classList.add('open')">
+      <div class="pub-year">2023</div>
+      <div>
+        <div class="pub-title">A First Look at the Spatial and Temporal Variability of Internet Performance Data in Hyperlocal Geographies</div>
+        <div class="pub-byline">Taveesh Sharma, Jonatas Marques, Nick Feamster and Nicole P. Marwell · <em>Research Conference on Communications, Information, and Internet Policy (TPRC)</em>, pp. 1–6, Washington, DC</div>
+        <div class="pub-links"><span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-ookla').classList.add('open')">Kyle MacMillan, Tarun Mangla, James Saxon, Nicole P. Marwell and Nick Feamster. 2023. "A Comparative Analysis of Ookla Speedtest and Measurement Lab's Network Diagnostic Test (NDT7)." <em>ACM SIGMETRICS</em>, Orlando, FL.<div class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3579448" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-ookla').classList.add('open')">
+      <div class="pub-year">2023</div>
+      <div>
+        <div class="pub-title">A Comparative Analysis of Ookla Speedtest and Measurement Lab's Network Diagnostic Test (NDT7)</div>
+        <div class="pub-byline">Kyle MacMillan, Tarun Mangla, James Saxon, Nicole P. Marwell and Nick Feamster · <em>ACM SIGMETRICS</em>, Orlando, FL</div>
+        <div class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3579448" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-internet-inequity').classList.add('open')">Kyle MacMillan, Tarun Mangla, Nick Feamster and Nicole P. Marwell. 2022. "Internet Inequity in Chicago: Adoption, Affordability, and Availability." <em>Conference on Communications, Information, and Internet Policy (TPRC)</em>, pp. 1–10, Washington, DC.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-internet-inequity').classList.add('open')">
+      <div class="pub-year">2022</div>
+      <div>
+        <div class="pub-title">Internet Inequity in Chicago: Adoption, Affordability, and Availability</div>
+        <div class="pub-byline">Kyle MacMillan, Tarun Mangla, Nick Feamster and Nicole P. Marwell · <em>Conference on Communications, Information, and Internet Policy (TPRC)</em>, pp. 1–10, Washington, DC</div>
+        <div class="pub-links"><span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-speed-test').classList.add('open')">Kyle MacMillan, Tarun Mangla, Nick Feamster and Nicole P. Marwell. 2022. "Best Practices for Collecting Speed Test Data." <em>Conference on Communications, Information, and Internet Policy (TPRC)</em>, pp. 1–10, Washington, DC.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-speed-test').classList.add('open')">
+      <div class="pub-year">2022</div>
+      <div>
+        <div class="pub-title">Best Practices for Collecting Speed Test Data</div>
+        <div class="pub-byline">Kyle MacMillan, Tarun Mangla, Nick Feamster and Nicole P. Marwell · <em>Conference on Communications, Information, and Internet Policy (TPRC)</em>, pp. 1–10, Washington, DC</div>
+        <div class="pub-links"><span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-benchmarks').classList.add('open')">Nick Feamster and Nicole P. Marwell. 2022. "Benchmarks or Equity? A New Approach to Measuring Internet Performance." <em>Conference on Communications, Information, and Internet Policy (TPRC)</em>, pp. 1–10, Washington, DC.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-benchmarks').classList.add('open')">
+      <div class="pub-year">2022</div>
+      <div>
+        <div class="pub-title">Benchmarks or Equity? A New Approach to Measuring Internet Performance</div>
+        <div class="pub-byline">Nick Feamster and Nicole P. Marwell · <em>Conference on Communications, Information, and Internet Policy (TPRC)</em>, pp. 1–10, Washington, DC</div>
+        <div class="pub-links"><span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
     <div class="pub-category">Nonprofit Organizations &amp; Urban Governance</div>
 
-    <div style="margin-bottom:24px;">
-      <div style="font-size:0.68rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--brass); margin-bottom:16px; padding-bottom:8px; border-bottom:1px solid var(--rule);">Invited Reviews &amp; Overviews</div>
+    <div class="pub-subcategory">Invited Reviews &amp; Overviews</div>
 
-      <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-urban-poverty-review').classList.add('open')">Nicole P. Marwell and Shannon Morrissey. 2020. "Organizations and the Governance of Urban Poverty." <em>Annual Review of Sociology</em> 46: 233–250. <span style="font-size:0.72rem; color:var(--brass); font-weight:600; letter-spacing:0.08em; text-transform:uppercase; margin-left:6px;">Invited Review</span><div class="pub-links"><a href="https://doi.org/10.1146/annurev-soc-121919-054708" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
-
-      <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-governance-framework').classList.add('open')">Nicole P. Marwell and Maoz Brown. 2020. "Towards a Governance Framework of Government-Nonprofit Relations." Chapter 9 in Walter Powell and Patricia Bromley (eds.), <em>The Nonprofit Sector: A Research Handbook</em>, 3rd Edition. Palo Alto: Stanford University Press. <span style="font-size:0.72rem; color:var(--brass); font-weight:600; letter-spacing:0.08em; text-transform:uppercase; margin-left:6px;">Invited Review</span><div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-urban-poverty-review').classList.add('open')">
+      <div class="pub-year">2020</div>
+      <div>
+        <div class="pub-title">Organizations and the Governance of Urban Poverty</div>
+        <div class="pub-byline">Nicole P. Marwell and Shannon Morrissey · <em>Annual Review of Sociology</em> 46: 233–250</div>
+        <div class="pub-award">Invited Review</div>
+        <div class="pub-links"><a href="https://doi.org/10.1146/annurev-soc-121919-054708" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Abstract ↓</span></div>
+      </div>
     </div>
 
-    <div style="font-size:0.68rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--brass); margin-bottom:16px; padding-bottom:8px; border-bottom:1px solid var(--rule);">Articles &amp; Book Chapters</div>
+    <div class="pub-item" onclick="document.getElementById('modal-governance-framework').classList.add('open')">
+      <div class="pub-year">2020</div>
+      <div>
+        <div class="pub-title">Towards a Governance Framework of Government-Nonprofit Relations</div>
+        <div class="pub-byline">Nicole P. Marwell and Maoz Brown · Chapter 9 in <em>The Nonprofit Sector: A Research Handbook</em>, 3rd Edition, Stanford University Press</div>
+        <div class="pub-award">Invited Review</div>
+        <div class="pub-links"><span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-rct-equity').classList.add('open')">Jennifer E. Mosley, Nicole P. Marwell, Emily Claypool and Cameron Day. 2024. "Impact, Equity and Philanthropic Foundations: Can Randomized Controlled Trials Help Account for The Democratic Deficit?" <em>VOLUNTAS: International Journal of Voluntary and Nonprofit Organizations</em>.<div class="pub-links"><a href="https://doi.org/10.1007/s11266-024-00673-4" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-subcategory">Articles &amp; Book Chapters</div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-micro-relations').classList.add('open')">Nicole P. Marwell, Erez Aharon Marantz and Delia Baldassarri. 2020. "The Micro-Relations of Urban Governance: Patronage and Partnership." <em>American Journal of Sociology</em> 125: 1559–1601.<div class="pub-links"><a href="https://doi.org/10.1086/709250" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-rct-equity').classList.add('open')">
+      <div class="pub-year">2024</div>
+      <div>
+        <div class="pub-title">Impact, Equity and Philanthropic Foundations: Can Randomized Controlled Trials Help Account for The Democratic Deficit?</div>
+        <div class="pub-byline">Jennifer E. Mosley, Nicole P. Marwell, Emily Claypool and Cameron Day · <em>VOLUNTAS: International Journal of Voluntary and Nonprofit Organizations</em></div>
+        <div class="pub-links"><a href="https://doi.org/10.1007/s11266-024-00673-4" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-what-works').classList.add('open')">Jennifer E. Mosley, Nicole P. Marwell and Marci Ybarra. 2019. "Movement is Failing Human Service Organizations, and What Social Work Can Do to Fix It." <em>Human Service Organizations: Management, Leadership and Governance</em> 43, 1: 326–335.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-micro-relations').classList.add('open')">
+      <div class="pub-year">2020</div>
+      <div>
+        <div class="pub-title">The Micro-Relations of Urban Governance: Patronage and Partnership</div>
+        <div class="pub-byline">Nicole P. Marwell, Erez Aharon Marantz and Delia Baldassarri · <em>American Journal of Sociology</em> 125: 1559–1601</div>
+        <div class="pub-links"><a href="https://doi.org/10.1086/709250" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-health-service').classList.add('open')">Julia Koschinsky, Nicole P. Marwell and Raed Mansour. 2022. "Does Health Service Funding Go Where the Need Is? A Prototype Spatial Access Analysis for New Urban Contracts Data." <em>BMC Health Services Research</em> 22(45):1–12.<div class="pub-links"><a href="https://doi.org/10.1186/s12913-021-07370-8" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-what-works').classList.add('open')">
+      <div class="pub-year">2019</div>
+      <div>
+        <div class="pub-title">Movement is Failing Human Service Organizations, and What Social Work Can Do to Fix It</div>
+        <div class="pub-byline">Jennifer E. Mosley, Nicole P. Marwell and Marci Ybarra · <em>Human Service Organizations: Management, Leadership and Governance</em> 43, 1: 326–335</div>
+        <div class="pub-links"><span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-deficit-model').classList.add('open')">Nicole P. Marwell and Thad Calabrese. 2015. "A Deficit Model of Collaborative Governance: Government-Nonprofit Fiscal Relations in the Provision of Child Welfare Services." <em>Journal of Public Administration Research and Theory</em> 25: 1031–1058.<div class="pub-links"><a href="https://doi.org/10.1093/jopart/muu047" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-health-service').classList.add('open')">
+      <div class="pub-year">2022</div>
+      <div>
+        <div class="pub-title">Does Health Service Funding Go Where the Need Is? A Prototype Spatial Access Analysis for New Urban Contracts Data</div>
+        <div class="pub-byline">Julia Koschinsky, Nicole P. Marwell and Raed Mansour · <em>BMC Health Services Research</em> 22(45):1–12</div>
+        <div class="pub-links"><a href="https://doi.org/10.1186/s12913-021-07370-8" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-people-place').classList.add('open')">Nicole P. Marwell and Michael McQuarrie. 2013. "People, Place and System: Organizations and the Renewal of Urban Social Theory." <em>Annals of the American Academy of Political and Social Sciences</em>: 126–143.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-deficit-model').classList.add('open')">
+      <div class="pub-year">2015</div>
+      <div>
+        <div class="pub-title">A Deficit Model of Collaborative Governance: Government-Nonprofit Fiscal Relations in the Provision of Child Welfare Services</div>
+        <div class="pub-byline">Nicole P. Marwell and Thad Calabrese · <em>Journal of Public Administration Research and Theory</em> 25: 1031–1058</div>
+        <div class="pub-links"><a href="https://doi.org/10.1093/jopart/muu047" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-inequality-spatial').classList.add('open')">Nicole P. Marwell and Aaron Gullickson. 2013. "Inequality in the Spatial Allocation of Social Services: Government Contracts to New York City Nonprofit Organizations." <em>Social Service Review</em> 87: 319–353.<div class="pub-links"><a href="https://doi.org/10.1086/670910" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-people-place').classList.add('open')">
+      <div class="pub-year">2013</div>
+      <div>
+        <div class="pub-title">People, Place and System: Organizations and the Renewal of Urban Social Theory</div>
+        <div class="pub-byline">Nicole P. Marwell and Michael McQuarrie · <em>Annals of the American Academy of Political and Social Sciences</em>: 126–143</div>
+        <div class="pub-links"><span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-political-change').classList.add('open')">Nicole P. Marwell. 2010. "Political Change and the Institutionalization of the Nonprofit Service Delivery Infrastructure." In Elisabeth Clemens and Doug Guthrie, eds., <em>Politics and Partnerships: Nonprofits and Associations in American Governance</em>, pp. 209–236. Chicago: University of Chicago Press.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-inequality-spatial').classList.add('open')">
+      <div class="pub-year">2013</div>
+      <div>
+        <div class="pub-title">Inequality in the Spatial Allocation of Social Services: Government Contracts to New York City Nonprofit Organizations</div>
+        <div class="pub-byline">Nicole P. Marwell and Aaron Gullickson · <em>Social Service Review</em> 87: 319–353</div>
+        <div class="pub-links"><a href="https://doi.org/10.1086/670910" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-missing-org').classList.add('open')">Michael McQuarrie and Nicole P. Marwell. 2009. "The Missing Organizational Dimension in Urban Sociology." <em>City and Community</em> 8, 3: 247–268.<div class="pub-links"><a href="https://doi.org/10.1111/j.1540-6040.2009.01288.x" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-political-change').classList.add('open')">
+      <div class="pub-year">2010</div>
+      <div>
+        <div class="pub-title">Political Change and the Institutionalization of the Nonprofit Service Delivery Infrastructure</div>
+        <div class="pub-byline">Nicole P. Marwell · In Clemens and Guthrie, eds., <em>Politics and Partnerships</em>, pp. 209–236. University of Chicago Press</div>
+        <div class="pub-links"><span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-nonprofit-forprofit').classList.add('open')">Nicole P. Marwell and Paul-Brian McInerney. 2005. "The Nonprofit/For-Profit Continuum: Theorizing the Dynamics of Mixed-Form Markets." <em>Nonprofit and Voluntary Sector Quarterly</em> 34, 1: 7–28.<div class="pub-links"><span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-missing-org').classList.add('open')">
+      <div class="pub-year">2009</div>
+      <div>
+        <div class="pub-title">The Missing Organizational Dimension in Urban Sociology</div>
+        <div class="pub-byline">Michael McQuarrie and Nicole P. Marwell · <em>City and Community</em> 8, 3: 247–268</div>
+        <div class="pub-links"><a href="https://doi.org/10.1111/j.1540-6040.2009.01288.x" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text pub-clickable" onclick="document.getElementById('modal-privatizing').classList.add('open')">Nicole P. Marwell. 2004. "Privatizing the Welfare State: Nonprofit Community-Based Organizations as Political Actors." <em>American Sociological Review</em> 69: 265–291.<div class="pub-links"><a href="https://doi.org/10.1177/000312240406900206" target="_blank" onclick="event.stopPropagation()">DOI</a> <span style="font-size:0.72rem; color:var(--brass); font-weight:600; letter-spacing:0.08em; text-transform:uppercase;">Winner, Robert E. Park Distinguished Scholarly Article Award, ASA</span> <span class="pub-read-more">Read more ↓</span></div></div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-nonprofit-forprofit').classList.add('open')">
+      <div class="pub-year">2005</div>
+      <div>
+        <div class="pub-title">The Nonprofit/For-Profit Continuum: Theorizing the Dynamics of Mixed-Form Markets</div>
+        <div class="pub-byline">Nicole P. Marwell and Paul-Brian McInerney · <em>Nonprofit and Voluntary Sector Quarterly</em> 34, 1: 7–28</div>
+        <div class="pub-links"><span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
 
-    <div class="pub-item"><div></div><div class="pub-text">Nicole P. Marwell. 2004. "Ethnic and Post-Ethnic Politics in New York City: The Dominican Second Generation." Pp. 257–284 in Philip Kasinitz, Mary Waters, and John Mollenkopf, eds., <em>Becoming New Yorkers: Ethnographies of the New Second Generation</em>. New York: Russell Sage Foundation.</div></div>
+    <div class="pub-item" onclick="document.getElementById('modal-privatizing').classList.add('open')">
+      <div class="pub-year">2004</div>
+      <div>
+        <div class="pub-title">Privatizing the Welfare State: Nonprofit Community-Based Organizations as Political Actors</div>
+        <div class="pub-byline">Nicole P. Marwell · <em>American Sociological Review</em> 69: 265–291</div>
+        <div class="pub-award">Winner, Robert E. Park Distinguished Scholarly Article Award, ASA</div>
+        <div class="pub-links"><a href="https://doi.org/10.1177/000312240406900206" target="_blank" onclick="event.stopPropagation()">DOI</a> <span class="pub-read-more">Abstract ↓</span></div>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-year">2004</div>
+      <div>
+        <div class="pub-title">Ethnic and Post-Ethnic Politics in New York City: The Dominican Second Generation</div>
+        <div class="pub-byline">Nicole P. Marwell · Pp. 257–284 in Kasinitz, Waters, and Mollenkopf, eds., <em>Becoming New Yorkers</em>. Russell Sage Foundation</div>
+      </div>
+    </div>
 
   </section>
 
