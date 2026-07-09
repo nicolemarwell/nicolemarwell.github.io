@@ -1,14 +1,14 @@
 :root {
-  --deep: #3a7c3d;
-  --forest: #2d6130;
-  --mid: #b45309;
-  --brass: #d97706;
-  --brass-light: #f59e0b;
-  --cream: #f0fdf4;
-  --off-white: #fafafa;
+  --deep: #1e7e3a;
+  --forest: #165e2c;
+  --mid: #b06010;
+  --brass: #d48010;
+  --brass-light: #e8980e;
+  --cream: #fef3d8;
+  --off-white: #faf5ec;
   --text: #1a1a1a;
   --muted: #6b7280;
-  --rule: #e5e7eb;
+  --rule: #e8e0d4;
   --red: #b91c1c;
 }
 
@@ -41,8 +41,8 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 20% 80%, rgba(217,119,6,0.12) 0%, transparent 60%),
-                    radial-gradient(circle at 80% 20%, rgba(45,97,48,0.5) 0%, transparent 50%);
+  background-image: radial-gradient(circle at 20% 80%, rgba(212,128,16,0.12) 0%, transparent 60%),
+                    radial-gradient(circle at 80% 20%, rgba(22,94,44,0.5) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -151,7 +151,7 @@ body {
   top: -80px; right: -80px;
   width: 500px; height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(217,119,6,0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(212,128,16,0.15) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -194,7 +194,7 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--brass);
-  border: 1px solid rgba(217,119,6,0.4);
+  border: 1px solid rgba(212,128,16,0.4);
   padding: 4px 12px;
 }
 
@@ -500,7 +500,7 @@ h2.section-title {
 .book-title-link {
   cursor: pointer;
   text-decoration: underline;
-  text-decoration-color: rgba(217,119,6,0.4);
+  text-decoration-color: rgba(212,128,16,0.4);
   text-underline-offset: 3px;
   transition: text-decoration-color 0.2s;
 }
