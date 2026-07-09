@@ -4,6 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nicole P. Marwell | University of Chicago</title>
+  <meta name="description" content="Professor of sociology at UChicago studying urban governance, nonprofit organizations, internet equity, and AI governance. Author of Mismeasuring Impact (Stanford University Press, 2025)." />
+  <meta property="og:title" content="Nicole P. Marwell | University of Chicago" />
+  <meta property="og:description" content="Professor at the University of Chicago Crown Family School researching urban governance, nonprofit organizations, internet equity, and AI governance. Author of Mismeasuring Impact (Stanford University Press, 2025)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nicolemarwell.github.io/" />
+  <meta property="og:image" content="https://nicolemarwell.github.io/npmphoto.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Nicole P. Marwell | University of Chicago" />
+  <meta name="twitter:description" content="Professor at UChicago studying urban governance, nonprofit organizations, internet equity, and AI governance. Author of Mismeasuring Impact (Stanford University Press, 2025)." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nicole P. Marwell",
+    "jobTitle": "Professor",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "University of Chicago Crown Family School of Social Work, Policy, and Practice"
+    },
+    "url": "https://nicolemarwell.github.io/",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=d5DbR3IAAAAJ&hl=en",
+      "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3950121"
+    ],
+    "knowsAbout": ["Urban Governance", "Nonprofit Organizations", "Internet Equity", "AI Governance", "Sociology", "Urban Poverty"]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
   <style>
@@ -630,6 +657,42 @@
     .hero-inner > *:nth-child(4) { animation-delay: 0.30s; }
     .hero-inner > *:nth-child(5) { animation-delay: 0.38s; }
 
+    /* ── SELECTED WORKS ────────────────────────────────────── */
+    .selected-works {
+      background: var(--cream);
+      border-left: 3px solid var(--brass);
+      padding: 24px 28px;
+      margin-bottom: 36px;
+    }
+    .selected-works-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 16px;
+    }
+    .selected-work-item {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--rule);
+      cursor: pointer;
+    }
+    .selected-work-item:last-child { border-bottom: none; }
+    .selected-work-title {
+      font-size: 0.91rem;
+      color: var(--deep);
+      font-weight: 500;
+      line-height: 1.4;
+      transition: color 0.15s;
+    }
+    .selected-work-item:hover .selected-work-title { color: var(--mid); }
+    .selected-work-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 300;
+      margin-top: 3px;
+    }
+
     /* ── RESPONSIVE ────────────────────────────────────────── */
     @media (max-width: 860px) {
       .sidebar {
@@ -710,6 +773,30 @@
     <div class="section-header">
       <span class="section-eyebrow">Scholarship</span>
       <h2 class="section-title">Publications</h2>
+    </div>
+
+    <div class="selected-works">
+      <div class="selected-works-label">Selected Works</div>
+      <div class="selected-work-item" onclick="document.getElementById('modal-mismeasuring').classList.add('open')">
+        <div class="selected-work-title">Mismeasuring Impact: How Randomized Controlled Trials Threaten the Nonprofit Sector</div>
+        <div class="selected-work-meta">With Jennifer E. Mosley &nbsp;·&nbsp; Stanford University Press, 2025</div>
+      </div>
+      <div class="selected-work-item" onclick="document.getElementById('modal-privatizing').classList.add('open')">
+        <div class="selected-work-title">Privatizing the Welfare State: Nonprofit Community-Based Organizations as Political Actors</div>
+        <div class="selected-work-meta">American Sociological Review, 2004 &nbsp;·&nbsp; Winner, Robert E. Park Distinguished Scholarly Article Award, ASA</div>
+      </div>
+      <div class="selected-work-item" onclick="document.getElementById('modal-micro-relations').classList.add('open')">
+        <div class="selected-work-title">The Micro-Relations of Urban Governance: Patronage and Partnership</div>
+        <div class="selected-work-meta">With Erez Aharon Marantz and Delia Baldassarri &nbsp;·&nbsp; American Journal of Sociology, 2020</div>
+      </div>
+      <div class="selected-work-item" onclick="document.getElementById('modal-urban-poverty-review').classList.add('open')">
+        <div class="selected-work-title">Organizations and the Governance of Urban Poverty</div>
+        <div class="selected-work-meta">With Shannon Morrissey &nbsp;·&nbsp; Annual Review of Sociology, 2020 &nbsp;·&nbsp; Invited Review</div>
+      </div>
+      <div class="selected-work-item" onclick="document.getElementById('modal-beyond-data-points').classList.add('open')">
+        <div class="selected-work-title">Beyond Data Points: Regionalizing Crowdsourced Latency Measurements</div>
+        <div class="selected-work-meta">With Taveesh Sharma, Paul Schmitt, Francesco Bronzino, and Nick Feamster &nbsp;·&nbsp; ACM SIGMETRICS, 2025</div>
+      </div>
     </div>
 
     <div class="pub-category">Books</div>
