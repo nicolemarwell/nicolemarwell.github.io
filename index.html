@@ -35,16 +35,16 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --deep: #0f1f17;
-      --forest: #1a3328;
-      --mid: #2a5040;
-      --brass: #c9a84c;
-      --brass-light: #e8cc7a;
-      --cream: #f5f0e8;
-      --off-white: #fafaf7;
+      --deep: #1f1a17;
+      --forest: #241f1a;
+      --mid: #8b4a3c;
+      --brass: #c4736a;
+      --brass-light: #d9907f;
+      --cream: #f0ebe0;
+      --off-white: #f7f3ee;
       --text: #1a1a1a;
-      --muted: #6b7280;
-      --rule: #e2ddd4;
+      --muted: #7a6e69;
+      --rule: #e0d8cf;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -54,8 +54,8 @@
       font-family: 'DM Sans', sans-serif;
       background: var(--off-white);
       color: var(--text);
-      font-size: 16px;
-      line-height: 1.75;
+      font-size: 17px;
+      line-height: 1.8;
     }
 
     /* ── SIDEBAR ───────────────────────────────────────────── */
@@ -76,8 +76,8 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-image: radial-gradient(circle at 20% 80%, rgba(201,168,76,0.08) 0%, transparent 60%),
-                        radial-gradient(circle at 80% 20%, rgba(42,80,64,0.4) 0%, transparent 50%);
+      background-image: radial-gradient(circle at 20% 80%, rgba(196,115,106,0.08) 0%, transparent 60%),
+                        radial-gradient(circle at 80% 20%, rgba(55,35,28,0.4) 0%, transparent 50%);
       pointer-events: none;
     }
 
@@ -172,7 +172,7 @@
       top: -80px; right: -80px;
       width: 500px; height: 500px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(196,115,106,0.12) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -237,7 +237,7 @@
     .hero-role strong { color: rgba(255,255,255,0.8); font-weight: 500; }
 
     .hero-inner p {
-      font-size: 0.97rem;
+      font-size: 1.02rem;
       font-weight: 300;
       color: rgba(255,255,255,0.75);
       margin-bottom: 16px;
@@ -307,22 +307,24 @@
     .pub-category:first-of-type { margin-top: 0; }
 
     .pub-item {
-      display: grid;
-      grid-template-columns: 3px 1fr;
-      gap: 0 18px;
-      margin-bottom: 20px;
+      display: block;
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--rule);
+      padding: 18px 22px;
+      margin-bottom: 10px;
+      transition: border-left-color 0.2s, box-shadow 0.2s;
     }
-    .pub-item > div:first-child {
-      background: var(--rule);
-      border-radius: 2px;
-      transition: background 0.2s;
+    .pub-item > div:first-child { display: none; }
+    .pub-item:hover {
+      border-left-color: var(--brass);
+      box-shadow: 0 2px 16px rgba(31,26,23,0.07);
     }
-    .pub-item:hover > div:first-child { background: var(--brass); }
 
     .pub-text {
-      font-size: 0.91rem;
+      font-size: 0.97rem;
       color: #3a3a3a;
-      line-height: 1.65;
+      line-height: 1.7;
     }
     .pub-text em { color: var(--deep); font-style: italic; }
 
@@ -399,7 +401,7 @@
       grid-template-columns: 100px 1fr;
       gap: 16px;
       margin-bottom: 16px;
-      font-size: 0.91rem;
+      font-size: 0.95rem;
     }
 
     .cv-year {
