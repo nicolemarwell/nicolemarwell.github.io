@@ -1,14 +1,14 @@
 :root {
-  --deep: #1e7e3a;
-  --forest: #165e2c;
-  --mid: #b06010;
-  --brass: #d48010;
-  --brass-light: #e8980e;
-  --cream: #fef3d8;
-  --off-white: #faf5ec;
-  --text: #1a1a1a;
-  --muted: #6b7280;
-  --rule: #e8e0d4;
+  --deep: #124E66;
+  --forest: #124E66;
+  --mid: #748D92;
+  --brass: #748D92;
+  --brass-light: #D3D9D4;
+  --cream: #D3D9D4;
+  --off-white: #f0f3f2;
+  --text: #2E3944;
+  --muted: #748D92;
+  --rule: #D3D9D4;
   --red: #b91c1c;
 }
 
@@ -41,8 +41,8 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 20% 80%, rgba(212,128,16,0.12) 0%, transparent 60%),
-                    radial-gradient(circle at 80% 20%, rgba(22,94,44,0.5) 0%, transparent 50%);
+  background-image: radial-gradient(circle at 20% 80%, rgba(116,141,146,0.15) 0%, transparent 60%),
+                    radial-gradient(circle at 80% 20%, rgba(18,78,102,0.4) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -151,7 +151,7 @@ body {
   top: -80px; right: -80px;
   width: 500px; height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(212,128,16,0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(211,217,212,0.15) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -194,7 +194,7 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--brass);
-  border: 1px solid rgba(212,128,16,0.4);
+  border: 1px solid rgba(116,141,146,0.4);
   padding: 4px 12px;
 }
 
@@ -500,7 +500,7 @@ h2.section-title {
 .book-title-link {
   cursor: pointer;
   text-decoration: underline;
-  text-decoration-color: rgba(212,128,16,0.4);
+  text-decoration-color: rgba(116,141,146,0.4);
   text-underline-offset: 3px;
   transition: text-decoration-color 0.2s;
 }
@@ -672,7 +672,7 @@ h2.section-title {
 }
 .course-card:hover {
   border-color: var(--brass);
-  box-shadow: 0 4px 20px rgba(15,31,23,0.07);
+  box-shadow: 0 4px 20px rgba(18,78,102,0.07);
 }
 .course-level {
   font-size: 0.68rem;
@@ -746,7 +746,7 @@ h2.section-title {
   top: -60px; right: -60px;
   width: 400px; height: 400px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(217,119,6,0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(211,217,212,0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 .page-hero::after {
