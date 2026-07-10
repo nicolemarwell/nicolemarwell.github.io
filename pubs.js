@@ -11,7 +11,7 @@
     proceedings: 'Proceedings', essay: 'Essay / Report',
     review: 'Book review', working: 'Working paper'
   };
-  var THEME_LABELS = { nonprofit: 'Nonprofit & Governance', internet: 'Internet Equity' };
+  var THEME_LABELS = { nonprofit: 'Nonprofit & Governance', internet: 'Internet Innovation' };
 
   /* ---- Name / citation formatting -------------------------- */
   var PARTICLES = { de:1, la:1, le:1, van:1, von:1, der:1, del:1, di:1, da:1, dos:1, du:1, bin:1, al:1 };
