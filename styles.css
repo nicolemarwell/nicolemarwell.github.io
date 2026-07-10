@@ -457,7 +457,7 @@ img.is-empty { display: none; }
   font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--plum); line-height: 1.4;
 }
 .about-photo {
-  position: relative; aspect-ratio: 5 / 6; border-radius: 20px; overflow: hidden;
+  position: relative; aspect-ratio: 16 / 9; border-radius: 20px; overflow: hidden;
   background: linear-gradient(150deg, var(--plum-soft) 0%, var(--apricot) 100%);
   box-shadow: var(--shadow-md);
 }
@@ -710,7 +710,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, .chip:focus-visible,
   .feature-book { grid-template-columns: 1fr; gap: 30px; padding: 36px; }
   .book-cover { width: 190px; margin: 0 auto; }
   .about-teaser { grid-template-columns: 1fr; gap: 36px; }
-  .about-photo { order: -1; aspect-ratio: 3 / 2; }
+  .about-photo { order: -1; aspect-ratio: 16 / 9; }
   .media-strip { grid-template-columns: 1fr 1fr; }
   .rb-grid { grid-template-columns: 1fr; gap: 32px; }
   .collab-grid { grid-template-columns: 1fr; }
