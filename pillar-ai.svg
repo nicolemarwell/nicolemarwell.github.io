@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Layered neural network lattice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#442C41"/>
+      <stop offset="1" stop-color="#E0996B"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <!-- layered mesh edges (col1 x=200, col2 x=400, col3 x=600; rows y=200,340,480,620) -->
+  <g stroke="#FAF5F0" stroke-opacity="0.22" stroke-width="2" fill="none">
+    <line x1="200" y1="200" x2="400" y2="200"/><line x1="200" y1="200" x2="400" y2="340"/><line x1="200" y1="200" x2="400" y2="480"/>
+    <line x1="200" y1="340" x2="400" y2="200"/><line x1="200" y1="340" x2="400" y2="340"/><line x1="200" y1="340" x2="400" y2="620"/>
+    <line x1="200" y1="480" x2="400" y2="340"/><line x1="200" y1="480" x2="400" y2="480"/><line x1="200" y1="480" x2="400" y2="620"/>
+    <line x1="200" y1="620" x2="400" y2="480"/><line x1="200" y1="620" x2="400" y2="620"/>
+    <line x1="400" y1="200" x2="600" y2="340"/><line x1="400" y1="200" x2="600" y2="200"/>
+    <line x1="400" y1="340" x2="600" y2="200"/><line x1="400" y1="340" x2="600" y2="480"/>
+    <line x1="400" y1="480" x2="600" y2="340"/><line x1="400" y1="480" x2="600" y2="620"/>
+    <line x1="400" y1="620" x2="600" y2="480"/><line x1="400" y1="620" x2="600" y2="620"/>
+  </g>
+  <!-- nodes -->
+  <g fill="#FAF5F0">
+    <g fill-opacity="0.85">
+      <circle cx="200" cy="200" r="10"/><circle cx="200" cy="340" r="10"/><circle cx="200" cy="480" r="10"/><circle cx="200" cy="620" r="10"/>
+      <circle cx="600" cy="200" r="10"/><circle cx="600" cy="340" r="10"/><circle cx="600" cy="480" r="10"/><circle cx="600" cy="620" r="10"/>
+    </g>
+    <g fill="#442C41" stroke="#FAF5F0" stroke-width="3">
+      <circle cx="400" cy="200" r="12"/><circle cx="400" cy="340" r="12"/><circle cx="400" cy="480" r="12"/><circle cx="400" cy="620" r="12"/>
+    </g>
+  </g>
+</svg>
