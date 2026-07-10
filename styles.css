@@ -593,9 +593,10 @@ img.is-empty { display: none; }
 
 /* ── RESEARCH BLOCKS ────────────────────────────────────────── */
 .research-block { padding-top: 48px; }
-.rb-banner { position: relative; min-height: 240px; border-radius: 20px; overflow: hidden; display: flex; align-items: flex-end; margin-bottom: 32px; background: var(--plum); }
+.rb-banner { position: relative; isolation: isolate; min-height: 240px; border-radius: 20px; overflow: hidden; display: flex; align-items: flex-end; margin-bottom: 32px; background: var(--plum); }
 .rb-banner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .rb-banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(46,29,44,0.15) 0%, rgba(46,29,44,0.72) 100%); }
+.rb-banner .pillar-media::after { content: none; } /* banner supplies its own overlay above; avoid double-darkening the photo */
 #nonprofit .rb-banner { background: linear-gradient(135deg, #5A3D56, #B5652F); }
 #internet .rb-banner { background: linear-gradient(135deg, #3B2A4A, #7C8B8F); }
 #ai .rb-banner { background: linear-gradient(135deg, #442C41, #E0996B); }
