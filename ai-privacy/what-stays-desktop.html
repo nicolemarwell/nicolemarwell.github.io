@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Stays on Your Computer After a Claude Code Session (Desktop App) | Nicole P. Marwell</title>
+  <meta name="description" content="Unknown unknown #4: Claude Code writes a complete record of every session to a hidden folder on your computer. Most users don't know it's there. Desktop app version." />
+  <link rel="canonical" href="https://nicolemarwell.github.io/ai-privacy/what-stays-desktop.html" />
+  <meta property="og:title" content="What Stays on Your Computer After a Claude Code Session" />
+  <meta property="og:description" content="Unknown unknown #4 — Claude Code writes a complete record of every session to a hidden folder on your computer, automatically and without prompting you. Most users don't know it's there." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://nicolemarwell.github.io/ai-privacy/what-stays-desktop.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html" aria-label="Nicole P. Marwell — home">
+        <span class="brand-mark">NM</span>
+        <span class="brand-name">Nicole&nbsp;P.&nbsp;Marwell</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+      <nav class="nav-links" id="nav-links" aria-label="Primary">
+        <a href="../research.html">Research</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../grants.html">Grants</a>
+        <a href="../teaching.html">Teaching</a>
+        <a href="../media.html">Media</a>
+        <a href="../ai-privacy.html" class="active">AI &amp; Privacy</a>
+        <a href="../about.html">About</a>
+        <a class="btn btn-primary" href="../cv.pdf">CV <span class="arrow">↓</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head"><div class="wrap paper-wrap">
+      <div class="paper-breadcrumb"><a href="../ai-privacy.html">&larr; AI &amp; Privacy series</a></div>
+      <div class="paper-head">
+        <span class="eyebrow">Unknown unknown #4 &middot; Desktop app</span>
+        <h1>What Stays on Your Computer After a Claude Code Session</h1>
+      </div>
+    </div></section>
+
+    <section class="section" style="padding-top:0;"><div class="wrap paper-wrap">
+      <p class="post-dek">Unknown unknown #4 &mdash; Claude Code writes a complete record of every session to a hidden folder on your computer, automatically and without prompting you. Most users don&rsquo;t know it&rsquo;s there.</p>
+      <p class="post-crosslink">Using the Terminal (CLI) instead? <a href="what-stays-terminal.html">Read the Terminal version &rarr;</a></p>
+
+      <div class="post-body">
+<p>The last post described what happens on Anthropic&rsquo;s side after a Claude Code session ends: what their servers receive, how long it&rsquo;s retained under different account types, and what the terms of your data-processing agreement permit them to do with it. This post focuses on your side. After every Claude Code session, a copy of that session remains on your computer: created without a prompt, stored in a location most users have never navigated to, and kept for thirty days by default. A copy of the session will also get saved by Time Machine or a similar backup service, for as long as that backup exists.</p>
+
+<h2>What Claude Code stores, and where</h2>
+<p>Claude Code writes every session to a set of files inside a folder called <code>.claude</code> in your home directory. The period at the start of the name is key. On a Mac, folders whose names begin with a period are hidden from view by default. They do not appear in Finder when you browse normally. The folder is there; it&rsquo;s just not shown.</p>
+<p>Inside <code>.claude</code>, in a subfolder called <code>projects</code>, Claude Code stores your conversations as transcript files &mdash; one per session, containing the full exchange: your prompts, Claude&rsquo;s responses, and the contents of any files Claude Code opened during the session. Written as a path, the location is:</p>
+<p><code>~/.claude/projects/</code></p>
+<p>By default, Claude Code retains these files on your computer for thirty days; it then deletes them automatically, without any notification to you.</p>
+
+<h2>What the transcript contains</h2>
+<p>The transcript is a complete record, not a summary or a curated version of the session. When you work with Claude Code, you are working through a problem: iterating, revising, pasting in context to give the tool enough to help you. The transcript captures all of it. If you opened a file containing identifiable student information, a research participant&rsquo;s transcript, or budget details that were not meant to leave your office, that content is in the session transcript. It&rsquo;s not there because you saved it, but simply as a byproduct of working with Claude Code.</p>
+
+<h2>The discovery problem</h2>
+<p>The access risk these files pose is not unique to Claude Code. Anyone who has access to your computer &mdash; an IT technician servicing it, a colleague borrowing it &mdash; can read them the same way they could read any file on your computer. But if you don&rsquo;t know the transcripts are there, you can&rsquo;t apply judgment about whether or not you want to save them. And you aren&rsquo;t aware of the potential risk that someone else could see your transcripts if they gain access to your computer.</p>
+<p>In addition to transcript files that are stored on your computer, if you back up your computer using Time Machine or a service that backs up your entire computer, those backups do not skip hidden folders. That means your session transcripts are included in your backups alongside your documents &mdash; and those backup copies may persist long after Claude Code&rsquo;s automatic cleanup has removed them from your machine. So if you share your backup drive with someone, like an IT tech who&rsquo;s repairing it, it carries those copies with it.</p>
+
+<h2>A note on which tool you&rsquo;re using</h2>
+<p>This applies to Claude Code &mdash; specifically, the Code mode, whether you run it through the Claude desktop app or from a terminal window. Both write to the same <code>~/.claude/projects/</code> folder; although the interface is different, the storage behavior is the same.</p>
+<p>If you use the Chat mode in the Claude desktop app, or Claude through a browser, there are no transcript sessions written to your machine. But Anthropic does still retain your data on its server side, as discussed in the previous post. Cowork mode is a separate case, which I&rsquo;ll get to in a later post.</p>
+
+<h2>How to find and manage your transcripts</h2>
+<p>To see your transcripts in Finder, press <strong>Command + Shift + period</strong>. This makes hidden items visible. Your home directory will now show the <code>.claude</code> folder alongside your usual ones. Open it, open <code>projects</code>, and you&rsquo;ll find one subfolder per project, each holding the session files from that work.</p>
+<p>To remove transcripts, select and delete the files from Finder. Claude Code automatically deletes files older than thirty days, but that cleanup runs silently and does not apply to backup copies. If you want to manage what&rsquo;s stored here on an ongoing basis, it is a manual step you should take periodically.</p>
+
+<h2>The takeaway</h2>
+<blockquote>
+<p><strong>Claude Code writes a full transcript of every session to <code>~/.claude/projects/</code> on your computer &mdash; hidden by default, kept for thirty days, and included in backups.</strong></p>
+<ul>
+<li><strong>To see what&rsquo;s there:</strong> In Finder, press <strong>Command + Shift + period</strong> to show hidden folders. Navigate to <code>.claude</code> &rarr; <code>projects</code>.</li>
+<li><strong>To remove transcripts:</strong> Delete the files from Finder. Claude Code automatically removes them after thirty days, but that cleanup does not reach your backups.</li>
+<li><strong>On backups:</strong> Time Machine and similar backup services include hidden folders. Copies of your transcripts may already exist on backup drives &mdash; those need to be managed separately.</li>
+<li><strong>On which tool this applies to:</strong> Code mode (desktop app or terminal). Chat mode in a browser or the desktop app creates no local transcript.</li>
+</ul>
+</blockquote>
+      </div>
+
+      <div class="post-next">
+        <div class="rb-subhead">Next in the series</div>
+        <div class="pn-title">Unknown unknown #5 &mdash; Oversight: what you lose when you can&rsquo;t see what the assistant is doing</div>
+        <div class="pn-meta">Coming soon &middot; Desktop app version</div>
+      </div>
+    </div></section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="brand-name">Nicole P. Marwell</span>
+          <p>Professor, Crown Family School of Social Work, Policy, and Practice, University of Chicago.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="../research.html">Research</a>
+          <a href="../publications.html">Publications</a>
+          <a href="../grants.html">Grants</a>
+          <a href="../teaching.html">Teaching</a>
+          <a href="../media.html">Media</a>
+          <a href="../ai-privacy.html">AI &amp; Privacy</a>
+          <a href="../about.html">About</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="mailto:nmarwell@uchicago.edu">nmarwell@uchicago.edu</a>
+          <a href="https://scholar.google.com/citations?user=d5DbR3IAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3950121" target="_blank" rel="noopener">SSRN</a>
+          <a href="https://orcid.org/0000-0001-5748-3179" target="_blank" rel="noopener">ORCID</a>
+          <a href="../cv.pdf">Curriculum Vitae (PDF)</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Nicole P. Marwell</span>
+        <span>University of Chicago &middot; Edith Abbott Hall, Chicago, IL</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>
