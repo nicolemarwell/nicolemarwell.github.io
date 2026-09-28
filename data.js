@@ -31,10 +31,12 @@ window.PUBS = [
 
   /* ── ARTICLES, CHAPTERS & PROCEEDINGS ──────────────────── */
   {
-    id: 'configuring-geography', year: 2026, type: 'article', themes: ['nonprofit'], forthcoming: true,
+    id: 'configuring-geography', year: 2026, type: 'article', themes: ['nonprofit'],
     title: 'Configuring the Geography of Social Service Provision: Neighborhood Characteristics, Nonprofit Spatial Strategies, and Public Funding',
     authors: ['Nicole P. Marwell', 'Kevin Credit', 'Ethan Park'],
-    container: 'Nonprofit and Voluntary Sector Quarterly'
+    container: 'Nonprofit and Voluntary Sector Quarterly',
+    url: 'https://doi.org/10.1177/08997640261472467', urlLabel: 'DOI',
+    abstract: 'Social services in the United States are delivered jointly by government and nonprofits. Prior research examines either the location or the resources of nonprofits; it rarely examines how these factors jointly influence social service availability or access. We leverage a unique dataset linking nonprofit headquarters and service site locations, along with organizational and neighborhood data. We find most nonprofits demonstrate neighborhood homophily, locating headquarters and service sites in demographically similar neighborhoods. However, we also find a distinctive set of nonprofits headquartered in affluent neighborhoods providing services in disadvantaged communities. Organizations serving neighborhoods with predominantly Black and Asian/immigrant populations are exposed to heightened fiscal vulnerability. Our study demonstrates how inequalities in access to nonprofit social services are shaped by the combination of where nonprofits provide services, the manner in which nonprofits spatially organize services across various sites, and the overall capacity of these organizations.'
   },
   {
     id: 'less-is-more', year: 2026, type: 'proceedings', themes: ['internet'], forthcoming: true,
