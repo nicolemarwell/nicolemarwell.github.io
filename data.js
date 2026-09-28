@@ -39,7 +39,7 @@ window.PUBS = [
     abstract: 'Social services in the United States are delivered jointly by government and nonprofits. Prior research examines either the location or the resources of nonprofits; it rarely examines how these factors jointly influence social service availability or access. We leverage a unique dataset linking nonprofit headquarters and service site locations, along with organizational and neighborhood data. We find most nonprofits demonstrate neighborhood homophily, locating headquarters and service sites in demographically similar neighborhoods. However, we also find a distinctive set of nonprofits headquartered in affluent neighborhoods providing services in disadvantaged communities. Organizations serving neighborhoods with predominantly Black and Asian/immigrant populations are exposed to heightened fiscal vulnerability. Our study demonstrates how inequalities in access to nonprofit social services are shaped by the combination of where nonprofits provide services, the manner in which nonprofits spatially organize services across various sites, and the overall capacity of these organizations.'
   },
   {
-    id: 'less-is-more', year: 2026, type: 'proceedings', themes: ['internet'], forthcoming: true,
+    id: 'less-is-more', year: 2026, type: 'proceedings', themes: ['internet'],
     title: 'Less is More: Optimizing Probe Selection Using Shared Latency Anomalies',
     authors: ['Taveesh Sharma', 'Andrew Chu', 'Paul Schmitt', 'Francesco Bronzino', 'Nicole P. Marwell', 'Nick Feamster'],
     container: 'Proceedings of the ACM on Networking (CoNEXT)', detail: 'Vol. 4, Article 18',
