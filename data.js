@@ -222,9 +222,10 @@ window.PUBS = [
   },
   {
     id: 'ethnic-politics', year: 2004, type: 'chapter', themes: [],
-    title: 'Ethnic and Post-Ethnic Politics in New York City: The Dominican Second Generation',
+    title: 'Ethnic and Postethnic Politics in New York City: The Dominican Second Generation',
     authors: ['Nicole P. Marwell'],
-    container: 'Becoming New Yorkers (Kasinitz, Waters & Mollenkopf, eds.), Russell Sage Foundation', detail: '257–284'
+    container: 'Becoming New Yorkers (Kasinitz, Mollenkopf & Waters, eds.), Russell Sage Foundation', detail: '257–284',
+    abstract: 'Drawing on participant-observation in two New York City neighborhoods with large Dominican populations—Bushwick-Williamsburg and Washington Heights-Inwood—this chapter examines how the Dominican second generation achieves political incorporation. It argues that neighborhood context decisively shapes whether ethnic or post-ethnic political strategies prevail: where Dominicans compete within a broader, ethnically diverse Latino coalition, shared group identity remains the primary resource for organizing and accessing political power. Where Dominicans have achieved sufficient electoral entrenchment through first-generation pioneers, an emergent second-generation organization (Young Dominicans) experiments with a post-ethnic model that deploys Dominican identity as one resource among many in broader, class-based coalition building.'
   },
 
   /* ── INVITED ESSAYS & REPORTS ──────────────────────────── */
