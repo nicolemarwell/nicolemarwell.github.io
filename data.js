@@ -47,11 +47,11 @@ window.PUBS = [
     abstract: 'Using four months of high-frequency round-trip-time measurements from 99 residential probes in Chicago, this paper detects latency anomalies shared across devices without relying on network topology, and develops a sampling algorithm that covers 95% of aggregate anomaly impact using less than half the probes.'
   },
   {
-    id: 'spatial-variation', year: 2026, type: 'proceedings', themes: ['internet'], forthcoming: true,
+    id: 'spatial-variation', year: 2026, type: 'proceedings', themes: ['internet'],
     title: 'Characterizing Spatial Variation in Internet Access Latency: A Multilevel Approach',
     authors: ['Jonatas Marques', 'Jared N. Schachner', 'Nicole P. Marwell', 'Nick Feamster'],
-    container: 'ACM Internet Measurement Conference (IMC)',
-    url: 'https://imc2026-cycle1.hotcrp.com/doc/imc2026-cycle1-final32.pdf', urlLabel: 'PDF'
+    container: 'Proceedings of the 2026 ACM Internet Measurement Conference', detail: 'pp. 1169–1182',
+    url: 'https://doi.org/10.1145/3777912.3809140', urlLabel: 'DOI'
   },
   {
     id: 'internet-futuring', year: 2026, type: 'article', themes: ['internet'],
