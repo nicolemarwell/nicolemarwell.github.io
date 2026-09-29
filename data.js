@@ -51,7 +51,8 @@ window.PUBS = [
     title: 'Characterizing Spatial Variation in Internet Access Latency: A Multilevel Approach',
     authors: ['Jonatas Marques', 'Jared N. Schachner', 'Nicole P. Marwell', 'Nick Feamster'],
     container: 'Proceedings of the 2026 ACM Internet Measurement Conference', detail: 'pp. 1169–1182',
-    url: 'https://doi.org/10.1145/3777912.3809140', urlLabel: 'DOI'
+    url: 'https://doi.org/10.1145/3777912.3809140', urlLabel: 'DOI',
+    abstract: 'Crowdsourced datasets are vital for analyzing variation in Internet access performance across geographic areas and addressing these spatial disparities. Prior research using these data and pursuing similar objectives often examines performance variation between single spatial units, such as census tracts, and scrutinizes a limited set of sociodemographic variables like race or class composition to explain it. However, this approach may be insufficiently precise to characterize the patterns of, and explanations for, spatial differences in Internet performance. We argue that multilevel, multivariate models better represent Internet performance as a spatial phenomenon; these models decompose its variance at multiple spatial scales and permit inclusion of multiple explanatory factors at each level. To demonstrate the utility of this approach, we use multilevel, multivariate models to analyze spatial patterns of Internet latency (idle and under load) and jitter drawn from crowdsourced Ookla Speedtest data collected between 2022 and 2023. Despite prior research’s emphasis on neighborhood variation in Internet performance, our multilevel models on crowdsourced data reveal that latency and jitter varies far more within neighborhoods than between them. Moreover, demographic differences in residential populations explain only a small portion of the modest neighborhood-level variance in Internet performance we estimate. Variation in infrastructure across counties and states appears to stratify performance to a far greater extent.'
   },
   {
     id: 'internet-futuring', year: 2026, type: 'article', themes: ['internet'],
@@ -231,7 +232,8 @@ window.PUBS = [
     id: 'rct-problem', year: 2025, type: 'essay', themes: ['nonprofit'],
     title: 'The Nonprofit Sector Has an RCT Problem',
     authors: ['Nicole P. Marwell', 'Jennifer E. Mosley'],
-    container: 'Stanford Social Innovation Review', detail: 'Fall, 58–67'
+    container: 'Stanford Social Innovation Review', detail: 'Fall, 58–67',
+    url: 'https://ssir.org/articles/entry/the-problem-with-randomized-controlled-trials', urlLabel: 'Open Access'
   },
   {
     id: 'emerging-directions', year: 2022, type: 'essay', themes: [],
