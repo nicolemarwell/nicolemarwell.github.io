@@ -44,7 +44,7 @@ window.PUBS = [
     authors: ['Taveesh Sharma', 'Andrew Chu', 'Paul Schmitt', 'Francesco Bronzino', 'Nicole P. Marwell', 'Nick Feamster'],
     container: 'Proceedings of the ACM on Networking (CoNEXT)', detail: 'Vol. 4, Article 18',
     url: 'https://doi.org/10.1145/3808666', urlLabel: 'DOI',
-    abstract: 'Using four months of high-frequency round-trip-time measurements from 99 residential probes in Chicago, this paper detects latency anomalies shared across devices without relying on network topology, and develops a sampling algorithm that covers 95% of aggregate anomaly impact using less than half the probes.'
+    abstract: 'Latency anomalies—persistent or transient increases in round-trip time (RTT)—are a common feature of residential Internet performance. When multiple users simultaneously experience anomalies at the same destination, it may indicate shared infrastructure issues, routing behavior, or congestion. However, inferring such shared behavior is challenging in practice. This is because the magnitude of these anomalies can vary significantly across devices, even within the same ISP and geographic area, and detailed network topology information is often unavailable due to platform limitations or privacy constraints. In this work, we study whether devices that experience a shared latency anomaly observe similar changes in RTT magnitude using a topology-agnostic approach. Using a four-month dataset of high-frequency RTT measurements from 99 residential probes in Chicago, we detect shared anomalies and analyze their consistency in amplitude and duration without relying on traceroutes or explicit path information. Building on prior change-point detection techniques, we find that many shared anomalies affect users similarly in amplitude, particularly within the same ISP. Leveraging this insight, we develop a sampling algorithm that reduces redundancy in detected anomalies by selecting representative devices under user-defined constraints. Our approach covers 95% of aggregate anomaly impact with less than half the total probes used in our deployment. Compared to two baselines, we show that our approach selects a significantly higher number of unique anomalies at similar coverage levels. Additionally, our analysis suggests that geographic diversity can play an important role in selecting probes for a single ISP even within a single city. These findings highlight the potential of using anomaly amplitude and duration as topology-independent signals for scalable monitoring, troubleshooting, and cost-effective sampling designs in residential Internet performance measurement.'
   },
   {
     id: 'spatial-variation', year: 2026, type: 'proceedings', themes: ['internet'],
@@ -68,7 +68,7 @@ window.PUBS = [
     authors: ['Taveesh Sharma', 'Paul Schmitt', 'Francesco Bronzino', 'Nicole P. Marwell', 'Nick Feamster'],
     container: 'ACM SIGMETRICS', detail: 'pp. 1–14',
     url: 'https://dl.acm.org/doi/10.1145/3700416', urlLabel: 'DOI',
-    abstract: 'This paper develops a regionalization method for crowdsourced latency data, grouping geographic areas by similarity in internet performance. Applied to a major U.S. city, it reveals coherent regional patterns that cut across administrative boundaries and correlate with network infrastructure — a new lens for understanding internet inequity.'
+    abstract: 'Despite significant investments in access network infrastructure, universal access to high-quality Internet connectivity remains a challenge. Policymakers often rely on large-scale, crowdsourced measurement datasets to assess the distribution of access network performance across geographic areas. These decisions typically rest on the assumption that Internet performance is uniformly distributed within predefined social boundaries, such as zip codes, census tracts, or neighborhood units. However, this assumption may not be valid for two reasons: (1) crowdsourced measurements often exhibit non-uniform sampling densities within geographic areas; and (2) predefined social boundaries may not align with the actual boundaries of Internet infrastructure. In this paper, we present a spatial analysis on crowdsourced datasets for constructing stable boundaries for sampling Internet performance. We hypothesize that greater stability in sampling boundaries will reflect the true nature of Internet performance disparities than misleading patterns observed as a result of data sampling variations. We apply and evaluate a series of statistical techniques to: (1) aggregate Internet performance over geographic regions; (2) overlay interpolated maps with various sampling unit choices; and (3) spatially cluster boundary units to identify contiguous areas with similar performance characteristics. We assess the effectiveness of the techniques we apply by comparing the similarity of the resulting boundaries for monthly samples drawn from the dataset. Our evaluation shows that the combination of techniques we apply achieves higher similarity compared to directly calculating central measures of network metrics over census tracts or neighborhood boundaries. These findings underscore the important role of spatial modeling in accurately assessing and optimizing the distribution of Internet performance, which can better inform policy, network operations, and long-term planning decisions.'
   },
   {
     id: 'fcc-challenge', year: 2024, type: 'proceedings', themes: ['internet'],
@@ -76,7 +76,7 @@ window.PUBS = [
     authors: ['Jonatas Marques', 'Alexis Schrubbe', 'Nicole P. Marwell', 'Nick Feamster'],
     container: 'Proceedings of the 52nd Research Conference on Communications, Information and Internet Policy (TPRC)',
     url: 'https://arxiv.org/abs/2404.04189', urlLabel: 'arXiv',
-    abstract: 'The first systematic analysis of the FCC Broadband Data Collection challenge process — who disputes reported availability, which areas they target, and how often they succeed — revealing gaps that may limit its ability to correct inaccuracies in federal broadband maps.'
+    abstract: 'In 2021, the Broadband Equity, Access, and Deployment (BEAD) program allocated $42.45 billion to enhance high-speed internet access across the United States. As part of this funding initiative, The Federal Communications Commission (FCC) developed a national coverage map to guide the allocation of BEAD funds. This map was the key determinant to direct BEAD investments to areas in need of broadband infrastructure improvements. The FCC encouraged public participation in refining this coverage map through the submission of “challenges” to either locations on the map or the status of broadband at any location on the map. These challenges allowed citizens and organizations to report discrepancies between the map’s data and actual broadband availability, ensuring a more equitable distribution of funds. In this paper, we present a study analyzing the nature and distribution of these challenges across different access technologies and geographic areas. Among several other insights, we observe, for example, that the majority of challenges (about 58%) were submitted against terrestrial fixed wireless technologies as well as that the state of Nebraska had the strongest engagement in the challenge process with more than 75% of its broadband-serviceable locations having submitted at least one challenge.'
   },
   {
     id: 'hitchhikers', year: 2024, type: 'proceedings', themes: ['internet'],
@@ -84,7 +84,7 @@ window.PUBS = [
     authors: ['Jonatas Marques', 'Alexis Schrubbe', 'Nicole P. Marwell', 'Nick Feamster'],
     container: 'Proceedings of the 52nd Research Conference on Communications, Information and Internet Policy (TPRC)',
     url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4913799', urlLabel: 'SSRN',
-    abstract: 'A practical guide to the structure, limitations, and analytical possibilities of the FCC Broadband Data Collection — the most comprehensive federal effort to map U.S. internet availability — giving researchers and policymakers the tools to use it responsibly.'
+    abstract: 'The FCC Broadband Data Collection (BDC) program has had—and will continue to have—tremendous impact on directing policy interventions and funding towards the goal of achieving broadband equity, access, and deployment across the United States. In this paper, we share our experience analyzing the data disseminated by the FCC as part of this program. We focus on discussing the challenges and limitations that one may encounter when exploring the datasets made publicly available as part of this program. Examples are the lack of direct, public data on the fabric layer; the retroactive removal of availability records from past data releases; and the purely file-based data serving model. We provide recommendations to stakeholders on ways to overcome these challenges and cope with limitations. These recommendations seek to introduce best practices for processing and analyzing the BDC data. Where appropriate, we also bring suggestions to the FCC on approaches to eliminate data limitations and lower barriers to analysis. These suggestions involve changes to how BDC data is published, served, updated, and summarized by the FCC.'
   },
   {
     id: 'rct-equity', year: 2024, type: 'article', themes: ['nonprofit'],
@@ -92,7 +92,7 @@ window.PUBS = [
     authors: ['Jennifer E. Mosley', 'Nicole P. Marwell', 'Emily Claypool', 'Cameron Day'],
     container: 'VOLUNTAS: International Journal of Voluntary and Nonprofit Organizations',
     url: 'https://doi.org/10.1007/s11266-024-00673-4', urlLabel: 'DOI',
-    abstract: 'Examines whether the use of randomized controlled trials in philanthropic evaluation can address concerns about democratic accountability, finding that while RCTs may improve some accountability dimensions, they introduce new equity concerns that limit their democratic potential.'
+    abstract: 'Philanthropic foundations in the USA have long wrestled with how to demonstrate they contribute to the public good in a democratic society given the outsized voice their wealth provides. Evaluating the work of their grantees is one way that foundations can demonstrate what that contribution is; the data drawn from evaluation are used to give accounts about the value of their work. Recently, foundations have confronted the evidence-based policy movement which promotes randomized controlled trials as an evaluation tool that can help reveal “what works” in the realm of social services. This provides a path for foundations to more firmly establish that they are benefiting society by providing impact but also presents risks around entrenching inequities and diminishing the voice of community partners. Drawing on interviews from 2019 with program officers from large U.S. foundations that fund social services evaluation, we find that, perhaps surprisingly, the majority of these foundations have serious concerns about RCT-based evaluation, are not giving impact-based accounts of their contributions, and instead rely on equity-based accounts, presenting grantees as partners and recognizing pluralist forms of knowledge. This approach offers a different, less top-down, solution to ongoing demands that foundations demonstrate their value in a democracy.'
   },
   {
     id: 'hyperlocal', year: 2023, type: 'proceedings', themes: ['internet'],
@@ -100,7 +100,7 @@ window.PUBS = [
     authors: ['Taveesh Sharma', 'Jonatas Marques', 'Nick Feamster', 'Nicole P. Marwell'],
     container: 'Proceedings of the 51st Research Conference on Communications, Information and Internet Policy (TPRC)',
     url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4568668', urlLabel: 'SSRN',
-    abstract: 'Internet performance can vary sharply over short distances and times, yet most research aggregates at coarse scales. This paper examines variability at hyperlocal levels — census blocks and below — revealing inequality that larger analyses miss.'
+    abstract: 'Measuring Internet access network performance has been a persistent challenge for researchers and policymakers alike. Unfortunately, existing “speed test” datasets typically lack comprehensive data across both space and time. Specifically, our past work has highlighted that tools like Ookla’s Speed Test and Measurement Lab’s NDT rely heavily on convenience samples (user-initiated tests from self-selected participants), resulting in a sample that may not generalize across either time or geography. Our ongoing research seeks to address these issues by developing innovative sampling methods and statistical models to provide a more holistic view of Internet performance. Initial findings, focusing on end-to-end latency across hyper-local regions within a single large city in the United States (Chicago, Illinois), reveal that spatial proximity often does not correlate with simultaneous performance anomalies. These insights underscore the need for advanced methods to generalize Internet performance data across time and space. Improved methods can ultimately enable a better understanding of the effects of infrastructure investments on the evolution of Internet performance.'
   },
   {
     id: 'ookla', year: 2023, type: 'proceedings', themes: ['internet'],
@@ -108,28 +108,23 @@ window.PUBS = [
     authors: ['Kyle MacMillan', 'Tarun Mangla', 'James Saxon', 'Nicole P. Marwell', 'Nick Feamster'],
     container: 'ACM SIGMETRICS',
     url: 'https://dl.acm.org/doi/10.1145/3579448', urlLabel: 'DOI',
-    abstract: 'The first rigorous side-by-side comparison of the two most common speed-test platforms — Ookla Speedtest and M-Lab’s NDT7 — examining how they differ in methodology, user base, and measured outcomes, and what that means for research and policy.'
+    abstract: ‘Consumers, regulators, and ISPs all use client-based “speed tests” to measure network performance, both in single-user settings and in aggregate. Two prevalent speed tests, Ookla’s Speedtest and Measurement Lab’s Network Diagnostic Test (NDT), are often used for similar purposes, despite having significant differences in both the test design and implementation, and in the infrastructure used to perform measurements. In this paper, we present the first-ever comparative evaluation of Ookla and NDT7 (the latest version of NDT), both in controlled and wide-area settings. Our goal is to characterize when and to what extent these two speed tests yield different results, as well as the factors that contribute to the differences. To study the effects of the test design, we conduct a series of controlled, in-lab experiments under a comprehensive set of network conditions and usage modes (e.g., TCP congestion control, native vs. browser client). Our results show that Ookla and NDT7 report similar speeds under most in-lab conditions, with the exception of networks that experience high latency, where Ookla consistently reports higher throughput. To characterize the behavior of these tools in wide-area deployment, we collect more than 80,000 pairs of Ookla and NDT7 measurements across nine months and 126 households, with a range of ISPs and speed tiers. This first-of-its-kind paired-test analysis reveals many previously unknown systemic issues, including high variability in NDT7 test results and systematically under-performing servers in the Ookla network.’
   },
   {
     id: 'benchmarks', year: 2022, type: 'proceedings', themes: ['internet'],
     title: 'Benchmarks or Equity? A New Approach to Measuring Internet Performance',
     authors: ['Nick Feamster', 'Nicole P. Marwell'],
     container: 'Proceedings of the 50th Research Conference on Communications, Information and Internet Policy (TPRC)',
-    abstract: 'Argues that benchmark-based measures of internet performance (fixed minimum speeds) miss the equity dimensions of service, and proposes an equity-centered framework that asks who gets what quality of service relative to others in their community.'
+    abstract: 'A longstanding approach to measuring Internet performance is to directly compare throughput against pre-defined benchmarks (e.g., 25 megabits per second downstream, 3 megabits per second upstream). In this paper, we advocate, develop, and demonstrate a different approach: rather than focusing on whether speeds meet a particular threshold, we develop techniques to determine whether a variety of Internet performance metrics (including throughput, latency, and loss rate) are comparable across geographies. We define these metrics and apply them across a longitudinal dataset of Internet performance measurements comprising approximately 30 neighborhoods across the City of Chicago. The metrics we define show some geographical disparities, indicating that such comparative metrics may be promising for studying questions of equitable Internet access across neighborhoods.'
   },
   {
-    id: 'best-practices', year: 2022, type: 'proceedings', themes: ['internet'],
-    title: 'Best Practices for Collecting Speed Test Data',
-    authors: ['Kyle MacMillan', 'Tarun Mangla', 'Nick Feamster', 'Nicole P. Marwell'],
-    container: 'Proceedings of the 50th Research Conference on Communications, Information and Internet Policy (TPRC)',
-    abstract: 'Develops and evaluates best practices for speed-test data collection — sampling, instrumentation, timing, and reporting — that materially affect the validity of broadband findings.'
-  },
   {
     id: 'internet-inequity', year: 2022, type: 'proceedings', themes: ['internet'],
     title: 'Internet Inequity in Chicago: Adoption, Affordability, and Availability',
     authors: ['Kyle MacMillan', 'Tarun Mangla', 'Nick Feamster', 'Nicole P. Marwell'],
     container: 'Proceedings of the 50th Research Conference on Communications, Information and Internet Policy (TPRC)',
-    abstract: 'Documents internet inequality in Chicago across three domains — adoption, affordability, and availability — and shows they do not always align, so closing the divide requires policies targeted at each dimension separately.'
+    url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4182994', urlLabel: 'SSRN',
+    abstract: 'Lack of access to high-quality Internet connectivity affects how people participate in all aspects of life, from education to work to recreation; disparities in Internet access thus carry over into many other aspects of life. Historically, the discussions on Internet inequity centers mainly around the rural vs. urban divide in the United States. The Covid-19 pandemic has also brought the prevalence of Internet inequity in urban areas to the broader collective attention. To further the study of this issue, this paper characterizes the state of Internet equity in Chicago, focusing on different dimensions of Internet equity, including availability, affordability, and adoption. To this end, we combine multiple existing datasets to understand the digital divide in Chicago and the contributing factors. Our findings show disparity in broadband adoption rates across neighborhoods in Chicago: Broadband adoption varies between 58–93% across community areas, with low access areas mostly concentrated in South and West Chicago. Furthermore, adoption rates are positively correlated with income and education level and negatively correlated with age. The former highlights the need to provide affordable Internet access, while the latter suggests introducing technology training programs, especially for the elderly. We also find disparity in broadband availability—with the number of ISP options in a census block significantly varying across the city, indicating infrastructure equity issues.'
   },
   {
     id: 'health-service', year: 2022, type: 'article', themes: ['nonprofit'],
@@ -137,7 +132,7 @@ window.PUBS = [
     authors: ['Julia Koschinsky', 'Nicole P. Marwell', 'Raed Mansour'],
     container: 'BMC Health Services Research', detail: '22(45), 1–12',
     url: 'https://doi.org/10.1186/s12913-021-07370-8', urlLabel: 'DOI',
-    abstract: 'Uses a unique dataset of New York City government contracts with nonprofits to study whether social-services funding tracks neighborhood need, distinguishing local organizations serving their immediate area from distributive organizations serving many.'
+    abstract: 'Background: Much of spatial access research measures the proximity to health service locations. We advance this research by focusing on whether health service funding is within walkable reach of neighborhoods with high hardship. This is made possible by a new administrative data source: financial contracts data for those human services that are delivered by nonprofits under contract with the government. Methods: In a prototypical spatial access study we apply a classic 2-step floating area catchment model for walkable network access to analyze 2018 data about contracted nonprofit health services funded by the Chicago Department of Public Health (CDPH). CDPH collected the data for the purpose of this study. Results: We find that the common container approach of aggregating contract amounts by provider headquarter locations in a given area (ignoring satellite service sites) underestimates the share of funding that goes to Chicago neighborhoods with higher hardship. Once service sites and spatial access are taken into account, a larger share of CDPH funds was found to be within walkable reach of Chicago’s high hardship areas. This was followed by low hardship areas (which could be driven by more headquarter locations there that do serve areas throughout the city). Medium hardship areas trail both, perhaps warranting closer attention. We explore these results by program type and neighborhood with a spatial decision support system developed for the health department. Conclusions: The typical approach for analyzing human service contracts based on headquarters is misleading — in fact, we find that results are reversed when service sites and walkable access are taken into account. This prototype provides an alternative framework for avoiding these misleading results.'
   },
   {
     id: 'micro-relations', year: 2020, type: 'article', themes: ['nonprofit'],
@@ -145,7 +140,7 @@ window.PUBS = [
     authors: ['Nicole P. Marwell', 'Erez Aharon Marantz', 'Delia Baldassarri'],
     container: 'American Journal of Sociology', detail: '125, 1559–1601',
     url: 'https://doi.org/10.1086/709250', urlLabel: 'DOI',
-    abstract: 'Analyzes the micro-relations of governance across politics and nonprofits, identifying the district-based politician as the key actor linking neighborhood and citywide social organization. Contract-allocation networks reveal two dynamics: exclusive, durable patronage and citywide, short-lived partnership.'
+    abstract: 'The classic urban ecological paradigm envisioned the articulation of the social organization of neighborhoods with that of the city as a whole. This article offers novel empirical evidence in support of this proposition. We analyze the microrelations of governance across two key urban domains, politics and nonprofit organizations, and identify the district-based politician as a key actor linking neighborhood-based and citywide forms of social organization. Using data of contracts allocated by city council members to nonprofits in New York City, analysis of the social network system linking these two types of actors shows two distinct relational dynamics: a patronage dynamic characterized by exclusive and long-lasting relationships between a council member and his/her local constituency and a partnership dynamic characterized by citywide relationships that are short-lived and fostered by organizational differentiation and embeddedness. Furthermore, politicians and nonprofits differently accommodate the copresence of these two models of resource allocation.'
   },
   {
     id: 'urban-poverty-review', year: 2020, type: 'article', themes: ['nonprofit'], award: 'Invited Review',
@@ -153,14 +148,14 @@ window.PUBS = [
     authors: ['Nicole P. Marwell', 'Shannon Morrissey'],
     container: 'Annual Review of Sociology', detail: '46, 233–250',
     url: 'https://doi.org/10.1146/annurev-soc-121919-054708', urlLabel: 'DOI',
-    abstract: 'Argues that the dominant social-disorganization lens obscures the many ways formal organizations produce and manage urban poverty, and proposes an approach combining urban governance and strategic-action-fields frameworks to open new research directions.'
+    abstract: 'Many recent sociological studies of urban poverty have drawn inspiration from the Chicago School model of social disorganization. Studies of urban poverty and formal organizations have been profoundly shaped by this theoretical perspective, casting organizations as components of neighborhoods and thus relevant for study as potential contributors to neighborhood social control. We argue that this approach obscures many ways in which formal organizations are involved in the production and management of urban poverty. In order to take advantage of the many insights offered by sociological studies of organizations, we propose that students of urban poverty expand their theoretical perspective on formal organizations. We develop such an approach, an amalgamation of key concepts from two existing theoretical frameworks rarely discussed in urban poverty studies: urban governance and strategic action fields. This perspective offers new directions for research on urban poverty and urges greater integration with related studies from political science and geography.'
   },
   {
     id: 'governance-framework', year: 2020, type: 'chapter', themes: ['nonprofit'],
-    title: 'Towards a Governance Framework of Government-Nonprofit Relations',
+    title: 'Toward a Governance Framework for Government–Nonprofit Relations',
     authors: ['Nicole P. Marwell', 'Maoz Brown'],
-    container: 'The Nonprofit Sector: A Research Handbook (3rd ed.), Stanford University Press', detail: 'Chapter 9',
-    abstract: 'Proposes a governance framework — drawing on political science and organizational sociology — as an alternative to economic models of government-nonprofit relations, situating those relations within the broader structures of urban governance.'
+    container: 'The Nonprofit Sector: A Research Handbook (3rd ed.), Stanford University Press', detail: 'Chapter 9, pp. 231–252',
+    abstract: 'The dominant sector-based approach to government–nonprofit relations—rooted in economic theories of voluntary, government, and contract failure—has generated important insights but has increasingly obscured the complex, boundary-blurring realities of how government agencies and nonprofit organizations actually engage with each other. This chapter proposes governance—defined as the relationships, interactions, conditions, and rules between government and nonprofit organizations that give rise to goal-setting, steering, and implementation of public issues—as a more analytically productive framework. Reviewing recent scholarship along three orientations (institutional conditions, individual motivations, and interorganizational relations), the authors show how a governance lens advances research on the four normative stakes most critical in the current period: fairness, effectiveness, accountability, and legitimacy.'
   },
   {
     id: 'what-works', year: 2019, type: 'article', themes: ['nonprofit'],
@@ -168,7 +163,7 @@ window.PUBS = [
     authors: ['Jennifer E. Mosley', 'Nicole P. Marwell', 'Marci Ybarra'],
     container: 'Human Service Organizations: Management, Leadership & Governance', detail: '43(1), 326–335',
     url: 'https://doi.org/10.1080/23303131.2019.1672598', urlLabel: 'DOI',
-    abstract: 'Argues that the “what works” movement, as implemented, imposes heavy evaluation burdens on human-service nonprofits without generating knowledge that improves practice, and proposes a social-work-centered alternative prioritizing organizational learning and equity.'
+    abstract: 'The social work profession has a long history of seeking legitimacy by adopting frameworks and methods from higher status professions. This quest has led to concerns about social work’s strengths potentially being sacrificed for broader professional approval. In this commentary we explore a contemporary iteration of this phenomenon—social work’s participation in the “What Works” movement, which promotes greater use of evidence-based practice (EBP) and policy—and discuss the impact of increasingly linking government funding for human service organizations (HSOs) to the use of EBPs. At risk are three foundations of social work practice: valuing community-based knowledge; preserving staff autonomy and a pipeline for social work trained managers; and making program decisions with a thorough understanding of organizational and community context. We argue that an organizational learning perspective may help HSOs maintain social work values while also drawing on evidence to improve the lives of consumers and their communities.'
   },
   {
     id: 'deficit-model', year: 2015, type: 'article', themes: ['nonprofit'],
@@ -176,14 +171,15 @@ window.PUBS = [
     authors: ['Nicole P. Marwell', 'Thad Calabrese'],
     container: 'Journal of Public Administration Research and Theory', detail: '25, 1031–1058',
     url: 'https://doi.org/10.1093/jopart/muu047', urlLabel: 'DOI',
-    abstract: 'Reframes government funding of nonprofits: rather than asking how public funds constrain private action, it asks how government deploys nonprofits to secure a public good. A New York State child-welfare case reveals a deficit model in which nonprofits are deputized to secure rights but under-resourced to do so.'
+    abstract: 'Much existing scholarship on nonprofit organizations’ receipt of government funds appears to assume that there is something highly problematic about this relationship. Although rarely articulated in these studies, the concern about the negative effects of government funding turns on a view of nonprofits that privileges their private character. In this article, rather than examining how public funds constrain private action, we inquire about how government deploys private organizations, via the mechanism of government funding, to secure a public good. Using a case study of the nonprofit child welfare sector in New York State, we theorize a deficit model of collaborative governance in which nonprofits have been deputized by the state to secure children’s social rights but do not receive sufficient resources to cover the costs of securing those rights. Then, we connect this theory to organization-level financial management practices that pose challenges to the nonprofits of both survival and service quality. This nonprofit organizational instability concerns the state insofar as it threatens the securing of individuals’ social rights.'
   },
   {
-    id: 'people-place', year: 2013, type: 'article', themes: ['nonprofit'],
-    title: 'People, Place and System: Organizations and the Renewal of Urban Social Theory',
-    authors: ['Nicole P. Marwell', 'Michael McQuarrie'],
-    container: 'Annals of the American Academy of Political and Social Science', detail: '126–143',
-    abstract: 'Offers a framework for how organizations matter to the production and amelioration of urban poverty, using the classical concept of integration to take seriously both organizations’ territorial embeddedness and their field-level dynamics.'
+    id: ‘people-place’, year: 2013, type: ‘article’, themes: [‘nonprofit’],
+    title: ‘People, Place and System: Organizations and the Renewal of Urban Social Theory’,
+    authors: [‘Nicole P. Marwell’, ‘Michael McQuarrie’],
+    container: ‘Annals of the American Academy of Political and Social Science’, detail: ‘126–143’,
+    url: ‘https://doi.org/10.1177/0002716212474795’, urlLabel: ‘DOI’,
+    abstract: ‘This article offers a theoretical framework for thinking about how organizations matter for the production, reproduction, and amelioration of urban poverty. We draw on the classical concept of integration, in both its social and systemic versions, as an important tool for advancing urban social theory. A key challenge for urban organizational analysts is to keep within view the processes of both social and systemic integration, while empirically investigating how they are connected (or not). Too many urban researchers focus on one or the other, with little conceptualization of the importance of linking the two. We argue that urban organizations of all kinds provide a strategic site for observing processes of both social and systemic integration, and that urban organizational research should examine many of them to better understand the multiple urban transformations currently in process.’
   },
   {
     id: 'inequality-spatial', year: 2013, type: 'article', themes: ['nonprofit'],
@@ -191,7 +187,7 @@ window.PUBS = [
     authors: ['Nicole P. Marwell', 'Aaron Gullickson'],
     container: 'Social Service Review', detail: '87, 319–353',
     url: 'https://doi.org/10.1086/670910', urlLabel: 'DOI',
-    abstract: 'Using 1997–2001 New York City contract data, finds that social-services contract dollars are positively associated with neighborhood disadvantage overall, though distributive organizations are less likely to be located in the neediest neighborhoods.'
+    abstract: 'Publicly funded social services are an increasingly important component of social provision spending, accounting for approximately one-fifth of today’s welfare state expenditures. These funds are often allocated through purchase of service contracts between state and municipal agencies and third-party providers, usually nonprofit organizations. This study uses a unique dataset of government contracts with nonprofit organizations in New York City between 1997 and 2001 to study the relationship between the allocation of social services funding across neighborhoods and neighborhood need. We distinguish between local organizations serving their immediate neighborhoods and distributive organizations serving multiple neighborhoods. Overall, contract dollars allocated to both organizational types are positively associated with socioeconomic disadvantage, although distributive organizations are less likely to be physically located in needy neighborhoods. However, contract dollars for services targeted to specific populations are sometimes negatively associated with the prevalence of these targeted populations, especially when those contracts go to distributive organizations.'
   },
   {
     id: 'political-change', year: 2010, type: 'chapter', themes: ['nonprofit'],
@@ -206,14 +202,15 @@ window.PUBS = [
     authors: ['Michael McQuarrie', 'Nicole P. Marwell'],
     container: 'City & Community', detail: '8(3), 247–268',
     url: 'https://doi.org/10.1111/j.1540-6040.2009.01288.x', urlLabel: 'DOI',
-    abstract: 'Argues that urban sociology — both Marxian political economy and Chicago-school work — treats organizations as derivative rather than productive of urban life, and proposes taking organizations seriously as active producers of urban outcomes.'
+    abstract: 'Our article takes issue with the treatment of organizations in much urban sociology. We argue that both Marxian political economists and Chicagoan ethnographers and quantitative analysts treat organizations as derivative rather than productive of urban social relations. This problem is not epistemological or methodological. Instead, it is rooted in the objects of analysis that urban sociologists choose. Drawing on key elements of structuration theory, we attempt to lay the groundwork for improving the treatment of organizations in urban sociology by flagging some of the key insights in the sociology of organizations. We do not view this intellectual borrowing as a one–way street, and we emphasize that urbanists have a contribution to make to sociological thinking about organizations. Correcting these problems is essential if we are to understand the link between contemporary institutional transformations and urban neighborhoods.'
   },
   {
     id: 'nonprofit-forprofit', year: 2005, type: 'article', themes: ['nonprofit'],
     title: 'The Nonprofit/For-Profit Continuum: Theorizing the Dynamics of Mixed-Form Markets',
     authors: ['Nicole P. Marwell', 'Paul-Brian McInerney'],
     container: 'Nonprofit and Voluntary Sector Quarterly', detail: '34(1), 7–28',
-    abstract: 'Theorizes mixed-form markets in which nonprofits and for-profits compete and collaborate, drawing on organization theory and economic sociology to explain why such markets emerge and what they mean for service quality, access, and equity.'
+    url: 'https://doi.org/10.1177/0899764004269739', urlLabel: 'DOI',
+    abstract: 'A growing body of research has emerged on “mixed-form” markets—markets for goods and services in which for-profit, nonprofit, and government providers coexist. This article seeks to understand the dynamics between nonprofit and for-profit organizations operating within the same market. The authors propose a five-step theoretical framework that includes both nonprofit and for-profit actors to capture what is fundamentally a temporal process: market identification; market growth; increasing cost for goods/services; increasing price for goods/services; and cross-sector competition. The authors use data from extended qualitative investigations in distinct service markets to analyze the unique contributions and capacities of each organizational form, and the transformation of market structure over time. The authors conclude that the dynamic interplay between nonprofit and for-profit forms within markets produces three possible outcomes: stratified, displaced, and defended markets.'
   },
   {
     id: 'privatizing', year: 2004, type: 'article', themes: ['nonprofit'], award: 'Winner, Robert E. Park Distinguished Scholarly Article Award (ASA)',
@@ -221,7 +218,7 @@ window.PUBS = [
     authors: ['Nicole P. Marwell'],
     container: 'American Sociological Review', detail: '69, 265–291',
     url: 'https://doi.org/10.1177/000312240406900206', urlLabel: 'DOI',
-    abstract: 'Shows how publicly funded nonprofit community-based organizations generate greater contract revenue by adding electoral politics to their service and community-building roles — producing a new organizational form, the machine-politics CBO.'
+    abstract: 'This paper examines a form of state social provision that has been neglected by current sociological theory: publicly funded supportive services. Federal policies of privatization and devolution, embraced since the Reagan years, have made private, nonprofit organizations the primary deliverers of these services. Public supportive services are distributed via competitive state- and local-level allocative processes that send government contracts to specific nonprofit community-based organizations (CBOs), which in turn serve specific neighborhoods and individuals. I describe a model by which CBOs generate greater contract revenues by adding electoral politics to their more traditional roles of providing services and building communities. This model produces a new kind of CBO: the machine politics CBO. By reciprocally distributing services to residents and binding residents to the organization, machine politics CBOs create reliable voting constituencies for local elected officials. These officials trade these constituencies at higher levels of the governmental system and steer government human service contracts to favored CBOs. Through this process, nonprofit CBOs can influence the allocation of service-based social provision in cities and therefore impact individuals’ ability to access these services.'
   },
   {
     id: 'ethnic-politics', year: 2004, type: 'chapter', themes: [],
@@ -241,13 +238,17 @@ window.PUBS = [
     id: 'emerging-directions', year: 2022, type: 'essay', themes: [],
     title: 'Emerging Directions in the Study of the Data-Society Interface',
     authors: ['Nicole P. Marwell', 'Cameron Day'],
-    container: 'Robert Wood Johnson Foundation'
+    container: 'Robert Wood Johnson Foundation',
+    url: 'https://crownschool.uchicago.edu/sites/default/files/2022-10/Data-Society_Interface_Report_081722.pdf', urlLabel: 'PDF',
+    abstract: 'This report surveys the emerging landscape of the “data-society interface” — the ways that new forms of data and analytic methods are transforming social life, governance, and the distribution of power. Challenging the assumption that data are neutral representations of reality, it argues that data are always produced through human choices and embed social and political values, with real consequences for equity, freedom, and democracy. The report poses three overarching questions about surveillance, data standards, and algorithmic decision-making; reviews descriptive, causal, and predictive approaches to analysis; and concludes with a call for urgent investment in data ethics and regulation.'
   },
   {
     id: 'rethinking-state', year: 2016, type: 'essay', themes: ['nonprofit'],
     title: 'Rethinking the State in Urban Outcasts',
     authors: ['Nicole P. Marwell'],
-    container: 'Urban Studies', detail: '53, 1095–1098'
+    container: 'Urban Studies', detail: '53, 1095–1098',
+    url: 'https://doi.org/10.1177/0042098015613256', urlLabel: 'DOI',
+    abstract: 'Wacquant’s treatment of the state’s role in producing urban marginality rests on outdated assumptions about a centralised state operating uniformly across one nation’s urban territories. More than a decade’s worth of urban scholarship focuses on a process more productively labelled ‘governance,’ which points to the multiplex relations among government, business, nongovernmental organisations and hybrid organisational forms in the production of urban inequality. While Wacquant gestures towards these ideas, a greater engagement with the range of extant empirical work on this subject is warranted.'
   },
   {
     id: 'bodega', year: 2009, type: 'essay', themes: [],
@@ -259,7 +260,8 @@ window.PUBS = [
     id: 'robert-moses', year: 2007, type: 'essay', themes: [],
     title: 'Looking for Robert Moses',
     authors: ['Nicole P. Marwell'],
-    container: 'Contexts', detail: '6, 75–77'
+    container: 'Contexts', detail: '6, 75–77',
+    url: 'https://doi.org/10.1525/ctx.2007.6.3.75', urlLabel: 'DOI'
   },
   {
     id: 'univ-community', year: 2003, type: 'essay', themes: ['nonprofit'],
